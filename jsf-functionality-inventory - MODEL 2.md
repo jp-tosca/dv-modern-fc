@@ -1,0 +1,246 @@
+| Page | Name of the functionality | Description |
+| --- | --- | --- |
+| Global layout - dataverse_template.xhtml | Standard page shell | Renders the shared JSF layout, favicon and stylesheet resources, skip link, AJAX progress status, header, footer, message panel, and shared contact dialog used by most JSF pages. |
+| Global header - dataverse_header.xhtml | Home navigation | Provides a root/home link through the navbar logo or brand. |
+| Global header - dataverse_header.xhtml | Add data navigation | Shows Add Data menu entries for creating a dataverse or dataset in the root dataverse when the current user or anonymous permissions allow it. |
+| Global header - dataverse_header.xhtml | Root search | Accepts a query from the navbar and redirects to the root dataverse search results. |
+| Global header - dataverse_header.xhtml | About, guides, and support links | Links to configured About, user guide, and support URLs, with support falling back to the in-app contact form when no support URL is configured. |
+| Global header - dataverse_header.xhtml | Support contact dialog | Initializes and opens the shared contact form from the header support link. |
+| Global header - dataverse_header.xhtml | Language switching | Lists configured locales and submits a language change through dataverseSession.updateLocaleInViewRootAndRedirect. |
+| Global header - dataverse_header.xhtml | Signup and login navigation | Shows signup and login links for anonymous users, preserving the redirect target. |
+| Global header - dataverse_header.xhtml | Authenticated account menu | Shows user display information, unread notification count, and links to My Data, notifications, account information, API token, and dashboard for superusers. |
+| Global header - dataverse_header.xhtml | Logout | Submits logout through dataverseHeaderFragment.logout. |
+| Global header - dataverse_header.xhtml | Banner dismissal | Lets users dismiss configured banner messages with dataverseSession.dismissMessage. |
+| Global header - dataverse_header.xhtml | Breadcrumb navigation | Builds breadcrumb links for dataverses, datasets, files, and admin pages, including widget-aware URL wrapping. |
+| Global header - dataverse_header.xhtml | Dataverse branded header | Displays collection logo, name, affiliation, unpublished status, tagline, and external link using dataverse theme settings. |
+| Global footer - dataverse_footer.xhtml | Footer navigation and branding | Displays root dataverse and Dataverse Project footer links and branding. |
+| Messages component - resources/iqbs/messages.xhtml | Message support link | Provides a support link inside validation or system messages that opens the contact form. |
+| Contact form - contactFormFragment.xhtml | Send support or contact message | Collects email, subject, message, and anti-spam sum, then sends via sendFeedbackDialog.sendMessage and hides the dialog on success. |
+| Error pages - 403.xhtml | Access denied support | Displays an access denied message and lets the user contact support. |
+| Error pages - 404.xhtml | Not found support | Displays a not found message and lets the user contact support. |
+| Error pages - 404.xhtml | Search from not found page | Lets the user enter a query and redirects to the root dataverse search results. |
+| Error pages - 404static.xhtml | Static not found fallback | Provides a static 404 page with project, privacy, and branding links for cases where JSF cannot render the normal page. |
+| Error pages - 500.xhtml | Server error display | Displays the generic server error page through the shared template. |
+| Authentication - loginpage.xhtml | Local login | Collects username and password and submits LoginPage.login. |
+| Authentication - loginpage.xhtml | Authentication provider selection | Lets users switch among configured authentication providers before logging in. |
+| Authentication - loginpage.xhtml | Password reset navigation | Links users to password reset from the login page. |
+| Authentication - loginpage.xhtml | Login support contact | Offers support contact links for login issues. |
+| Authentication - passwordreset.xhtml | Request password reset | Collects an email address and sends a password reset link. |
+| Authentication - passwordreset.xhtml | Reset password | Accepts a reset token flow, validates a new password and confirmation, requires terms where applicable, and submits PasswordResetPage.resetPassword. |
+| Authentication - confirmemail.xhtml | Confirm email and continue to account | Initializes email confirmation and provides a button to go to the account information tab. |
+| Authentication - shib.xhtml | Create Shibboleth account | Confirms institution-provided attributes and creates a Dataverse account through Shib.confirmAndCreateAccount. |
+| Authentication - shib.xhtml | Convert account to Shibboleth | Lets an existing local account be converted to Shibboleth authentication through Shib.confirmAndConvertAccount. |
+| OAuth2 - oauth2/firstLogin.xhtml | Create OAuth account | Collects account profile fields, terms acceptance, and submits OAuth2FirstLoginPage.createNewAccount. |
+| OAuth2 - oauth2/convert.xhtml | Convert existing account to OAuth | Accepts credentials for an existing account and links it to the OAuth provider through OAuth2FirstLoginPage.convertExistingAccount. |
+| OAuth2 - oauth2/callback.xhtml | OAuth callback handling | Exchanges an authorization code for a token through OAuth2Page.exchangeCodeForToken and displays status or support contact. |
+| OAuth2 - oauth2/orcidConfirm.xhtml | ORCID profile confirmation | Sets ORCID information on the profile through OAuth2Page.setOrcidInProfile and offers support contact if needed. |
+| User account - dataverseuser.xhtml | My Data tab | Shows data related to the user by embedding the My Data fragment. |
+| User account - mydata_fragment.xhtml | Search user-related data | Uses the My Data JavaScript API endpoint to search the user's dataverses, datasets, and files. |
+| User account - mydata_fragment.xhtml | Filter user-related data | Filters My Data by object type, publication status, role, metadata validity, and, for superusers, by user identifier. |
+| User account - mydata_fragment.xhtml | Load additional user-related results | Provides pagination and a more-results action in the JavaScript-driven My Data results list. |
+| User account - dataverseuser.xhtml | Notifications list | Displays notifications with deep links to related dataverses, datasets, files, permission pages, and guide pages. |
+| User account - dataverseuser.xhtml | Remove notification | Removes a notification from the account page through DataverseUserPage.remove. |
+| User account - dataverseuser.xhtml | Edit account profile | Lets an editable account update profile fields and save or cancel through DataverseUserPage.save and DataverseUserPage.cancel. |
+| User account - dataverseuser.xhtml | Change password | Opens the change password mode for accounts whose password is editable. |
+| User account - dataverseuser.xhtml | Email verification | Shows email verification status and sends a confirmation email with DataverseUserPage.sendConfirmEmail. |
+| User account - dataverseuser.xhtml | ORCID authentication | Starts ORCID authentication from the account page. |
+| User account - dataverseuser.xhtml | Remove ORCID | Removes an ORCID from the user profile when allowed. |
+| User account - dataverseuser.xhtml | API token management | Displays, copies, generates, and revokes API tokens through ApiTokenPage actions. |
+| Search - search-include-fragment.xhtml | Basic dataverse search | Submits a query to SearchIncludeFragment.searchRedirect from the dataverse search bar. |
+| Search - search-include-fragment.xhtml | Add data from search page | Opens an Add Data menu or guest login/signup popup, then links to new dataverse or new dataset creation. |
+| Search - search-include-fragment.xhtml | Filter by object type | Filters search results by dataverses, datasets, and files. |
+| Search - search-include-fragment.xhtml | Facet expansion | Expands and collapses facet choices with DataversePage.incrementFacets. |
+| Search - search-include-fragment.xhtml | Navigate result links | Links search results to dataverse, dataset, file, or harvested external targets with widget-aware wrapping. |
+| Search - search-include-fragment.xhtml | Copy result identifiers | Offers copy controls for file checksums and tabular data UNF values in search results. |
+| Search - search-include-fragment.xhtml | Post-load card values | Runs a remote command after load to populate display-card values. |
+| Search - search-include-pager.xhtml | Search pagination | Moves among search result pages using first, previous, numbered, next, and last page links. |
+| Advanced search - search/advanced.xhtml | Find from advanced search | Submits AdvancedSearchPage.find from the top or bottom of the advanced search form. |
+| Advanced search - search/advanced.xhtml | Search dataverse fields | Collects dataverse name, alias, affiliation, description, and subject criteria. |
+| Advanced search - search/advanced.xhtml | Search dataset metadata fields | Collects dynamic metadata block fields, publication date, and persistent identifier criteria. |
+| Advanced search - search/advanced.xhtml | Search file fields | Collects file name, description, type, persistent ID, variable name, variable label, and file tag criteria. |
+| Dataverse page - dataverse_homepage.xhtml | Dataverse homepage route | Initializes DataversePage for the root or alias-based dataverse homepage. |
+| Dataverse page - dataverse.xhtml | Create dataverse | Collects name, alias, category, affiliation, contacts, description, language, storage, curation label, PID provider, guestbook request-entry behavior, metadata blocks, and facets, then saves with DataversePage.save. |
+| Dataverse page - dataverse.xhtml | Edit dataverse information | Switches to INFO edit mode and saves edits to dataverse metadata and settings. |
+| Dataverse page - dataverse.xhtml | Change host dataverse | Uses an autocomplete owner selector and hidden update command to change the owning dataverse during creation or editing. |
+| Dataverse page - dataverse.xhtml | Manage dataverse contacts | Adds and removes contact email rows before saving the dataverse. |
+| Dataverse page - dataverse.xhtml | Configure metadata block inheritance | Toggles inherited metadata blocks, customizes selected metadata blocks, and resets to inherit. |
+| Dataverse page - dataverse.xhtml | Configure metadata fields | Shows, hides, and selects dataset field types inside metadata blocks. |
+| Dataverse page - dataverse.xhtml | Configure facets | Toggles facet inheritance, changes facet metadata blocks, and transfers selected facets between available and selected lists. |
+| Dataverse page - dataverse.xhtml | Save or cancel dataverse form | Saves changes with DataversePage.save or cancels an edit/create flow. |
+| Dataverse page - dataverse.xhtml | Contact dataverse | Initializes and opens the shared contact form for the dataverse. |
+| Dataverse page - dataverse.xhtml | Share dataverse | Opens the social sharing dialog for the dataverse URL. |
+| Dataverse page - dataverse.xhtml | Release dataverse | Shows release confirmation and calls DataversePage.releaseDataverse. |
+| Dataverse page - dataverse.xhtml | Link dataverse | Opens the linking popup and saves a linked dataverse with DataversePage.saveLinkedDataverse. |
+| Dataverse page - dataverse.xhtml | Create saved search link | Opens the linking popup in saved-search mode and saves a saved search with DataversePage.saveSavedSearch. |
+| Dataverse page - dataverse.xhtml | Navigate dataverse management options | Links to theme and widgets, permissions, groups, templates, and guestbooks management pages. |
+| Dataverse page - dataverse.xhtml | Edit featured browse options | Opens a featured/browse options dialog, updates featured content, and saves through DataversePage.save. |
+| Dataverse page - dataverse.xhtml | Delete dataverse | Shows a confirmation dialog and deletes the dataverse with DataversePage.deleteDataverse. |
+| Dataverse page - dataverse.xhtml | Reset modified configuration selections | Shows a reset modifications confirmation and checks or unchecks selected configuration state. |
+| Theme and widgets - ThemeAndWidgets.xhtml | Initialize dataverse theme management | Loads themeWidgetFragment.initEditDv and breadcrumbs for dataverse theme and widget management. |
+| Theme and widgets - themeAndWidgetsFragment.xhtml | Inherit customization | Toggles whether a dataverse inherits theme customization from its parent. |
+| Theme and widgets - themeAndWidgetsFragment.xhtml | Manage dataverse logos | Uploads, replaces, removes, formats, aligns, and colors header logo, thumbnail logo, and footer logo assets. |
+| Theme and widgets - themeAndWidgetsFragment.xhtml | Configure dataverse colors | Edits dataverse header background, link, text, logo background, and footer logo background colors. |
+| Theme and widgets - themeAndWidgetsFragment.xhtml | Configure tagline and link | Edits tagline text and optional website URL shown in the dataverse header. |
+| Theme and widgets - themeAndWidgetsFragment.xhtml | Save or cancel theme changes | Saves theme changes, cancels, or exits the disabled theme tab. |
+| Theme and widgets - themeAndWidgetsFragment.xhtml | Dataverse widget snippets | Displays embeddable search-box and dataverse-listing widget script snippets for released dataverses. |
+| Dataset widgets - dataset-widgets.xhtml | Manage dataset thumbnail image | Uploads a custom thumbnail, removes a custom thumbnail, removes a file-based thumbnail after confirmation, or selects an available file thumbnail. |
+| Dataset widgets - dataset-widgets.xhtml | Save or cancel dataset thumbnail changes | Saves or cancels dataset thumbnail changes with DatasetWidgetsPage.save or DatasetWidgetsPage.cancel. |
+| Dataset widgets - dataset-widgets.xhtml | Dataset widget snippets | Displays embeddable citation and full-dataset iframe widget snippets for released datasets. |
+| Dataset page - dataset.xhtml | Create dataset | Initializes dataset creation, applies owner and template choices, collects metadata, terms, and files, and saves through DatasetPage.save. |
+| Dataset page - dataset.xhtml | Change host dataverse | Uses an autocomplete owner selector and hidden update command to change the host dataverse for a dataset. |
+| Dataset page - dataset.xhtml | Apply dataset template | Lets the user select a dataset template and apply it through DatasetPage.handleChangeButton. |
+| Dataset metadata - metadataFragment.xhtml | Edit metadata fields | Edits primitive, controlled vocabulary, and compound dataset metadata fields. |
+| Dataset metadata - metadataFragment.xhtml | Add or remove repeated metadata values | Adds and removes repeated field values and compound field groups before save. |
+| Dataset metadata - metadataFragment.xhtml | Set metadata language | Selects a metadata language for the dataset. |
+| Dataset metadata - datasetFieldForEditFragment.xhtml | Replicate title data | Provides a client-side button to copy replication data into the title field. |
+| Dataset page - dataset.xhtml | Save or cancel dataset edits | Saves metadata or create-mode changes, saves terms mode, cancels edits, or cancels dataset creation. |
+| Dataset page - dataset-license-terms.xhtml | Select license | Chooses a license from configured licenses and updates the terms-of-use fragment. |
+| Dataset page - dataset-license-terms.xhtml | Edit custom terms of use | Edits custom terms of use plus confidentiality, permissions, restrictions, citation requirements, depositor requirements, conditions, and disclaimer text. |
+| Dataset page - dataset-license-terms.xhtml | Edit terms of access | Toggles file access request availability and edits terms of access, access place, original archive, availability status, access contact, collection size, and study completion fields. |
+| Dataset page - dataset-license-terms.xhtml | Manage dataset guestbook selection | Views selected guestbook details, clears the selected guestbook, and previews candidate guestbooks. |
+| Dataset page - dataset-citation.xhtml | Copy and download dataset citation | Lets users select the citation text and download EndNote XML, RIS, or BibTeX citation formats. |
+| Dataset page - dataset.xhtml | Open CSL citation dialog | Opens the CSL citation dialog, selects a CSL style, generates formatted citation text, and copies it. |
+| Dataset page - dataset.xhtml | Download all files | Starts download-all flows for access copies, original files, or archival copies, with guestbook and terms handling. |
+| Dataset page - dataset.xhtml | Transfer all files with Globus | Starts a Globus transfer for the dataset, including mixed valid/invalid file handling. |
+| Dataset page - dataset.xhtml | Explore dataset with external tools | Launches configured external tools for the dataset. |
+| Dataset page - dataset.xhtml | Compute batch workflow | Checks compute eligibility, adds or removes the dataset from the compute cart, lists cart contents, clears the cart, and opens the compute URL. |
+| Dataset page - dataset.xhtml | Publish dataset | Processes publish button state, opens the publish dialog, collects version choice and optional version note, and calls DatasetPage.releaseDataset. |
+| Dataset page - dataset.xhtml | Submit dataset for review | Submits a draft dataset for review through DatasetPage.submitDataset. |
+| Dataset page - dataset.xhtml | Return dataset to contributor | Collects an optional return reason and sends a dataset back to the contributor. |
+| Dataset page - dataset.xhtml | Edit dataset actions menu | Provides actions to upload files, edit metadata, edit terms, open permissions, open file permissions, open thumbnails/widgets, configure tools, delete dataset, delete draft, and deaccession. |
+| Dataset page - dataset.xhtml | Manage dataset permissions navigation | Links to dataset-level role permissions and file-level permissions management. |
+| Dataset page - dataset.xhtml | Create private URL | Initializes the private URL popup and creates a general preview URL or anonymized preview URL. |
+| Dataset page - dataset.xhtml | Copy or disable private URL | Displays generated private URLs, allows text selection, and disables general or anonymized private URLs after confirmation. |
+| Dataset page - dataset.xhtml | Configure dataset external tool | Opens a configure-tool dialog and calls DatasetPage.configure for the selected tool. |
+| Dataset page - dataset.xhtml | Delete dataset | Shows confirmation and deletes the dataset through DatasetPage.deleteDataset. |
+| Dataset page - dataset.xhtml | Delete draft version | Shows confirmation and deletes the draft dataset version through DatasetPage.deleteDatasetVersion. |
+| Dataset page - dataset.xhtml | Deaccession dataset versions | Opens deaccession dialogs, collects reason information, and deaccessions selected or all versions. |
+| Dataset page - dataset.xhtml | Set curation status | Sets, removes, and displays curation status and curation status history. |
+| Dataset page - dataset.xhtml | Link dataset to dataverses | Opens a link dataset dialog and saves selected linking dataverses. |
+| Dataset page - dataset.xhtml | Unlink dataset from dataverses | Opens an unlink dataset dialog and deletes selected linking dataverse relationships. |
+| Dataset page - dataset.xhtml | Contact and share dataset | Opens shared contact and social sharing dialogs for the dataset. |
+| Dataset page - dataset.xhtml | Browse dataset tabs | Displays files, metadata, terms, versions, and file data access or provenance-related tabs based on dataset state. |
+| Dataset versions - dataset-versions.xhtml | Compare dataset versions | Selects two dataset versions and computes differences with DatasetPage.compareVersionDifferences. |
+| Dataset versions - dataset-versions.xhtml | View version difference details | Opens detailed metadata, file, and terms difference dialogs for a version comparison. |
+| Dataset versions - dataset-versions.xhtml | Edit draft version note | Opens and saves a draft version note. |
+| Dataset versions - dataset-versions.xhtml | Archive dataset version | Lets superusers submit or archive eligible dataset versions. |
+| Dataset files - filesFragment.xhtml | Search within files | Searches the dataset file table with DatasetPage.updateFileSearch. |
+| Dataset files - filesFragment.xhtml | Paginate and select files | Handles file table paging, row selection, select all, and clear selection. |
+| Dataset files - filesFragment.xhtml | Download selected files | Starts selected-file downloads for access copies, original files, or archival copies. |
+| Dataset files - filesFragment.xhtml | Transfer selected files with Globus | Starts a Globus transfer for selected files. |
+| Dataset files - filesFragment.xhtml | Download rsync script | Downloads an rsync script for the dataset files. |
+| Dataset files - filesFragment.xhtml | Request access to selected files | Validates selected restricted files and either opens terms/guestbook flow or login/signup prompt. |
+| Dataset files - filesFragment.xhtml | Open file details | Links from file rows to file.xhtml by file ID or persistent ID and version. |
+| Dataset files - filesFragment.xhtml | Open query or preview tool from file row | Links directly to the file page with QUERY or PREVIEW tool type. |
+| Dataset files - filesFragment.xhtml | Copy file identifiers | Provides clipboard controls for file identifiers, checksums, and tabular UNF values. |
+| File download menu - file-download-button-fragment.xhtml | Request restricted file access | Lets authenticated users request access to a restricted file or opens login/signup for guests. |
+| File download menu - file-download-button-fragment.xhtml | Download file or package | Starts package, access-copy, original, archival, bundle, tabular, RData, or variable download flows. |
+| File download menu - file-download-button-fragment.xhtml | Handle guestbook and terms before download | Routes guestbook-required downloads to the guestbook and terms popup before starting download. |
+| File download menu - file-download-button-fragment.xhtml | Download citation for file | Downloads file citation in EndNote XML, RIS, or BibTeX formats. |
+| File download menu - file-download-button-fragment.xhtml | Download auxiliary files | Downloads auxiliary files through the auxiliary-file download API redirect. |
+| File download menu - file-download-button-fragment.xhtml | Launch external file tools | Launches configured explore or preview tools, with guestbook or package popup handling when required. |
+| Guestbook and terms - guestbook-terms-popup-fragment.xhtml | Accept terms for download or transfer | Collects required guestbook fields and terms acceptance, writes the guestbook response, and starts download or Globus transfer. |
+| Guestbook and terms - guestbook-terms-popup-fragment.xhtml | Accept terms for preview or external tool | Writes guestbook data and launches preview or external tool flows. |
+| Guestbook and terms - guestbook-terms-popup-fragment.xhtml | Request access after guestbook | Writes guestbook response or requests access indirectly, then refreshes the page. |
+| Package download - package-download-popup-fragment.xhtml | Close package download popup | Shows package-download guidance and lets the user close the popup. |
+| Edit files - editdatafiles.xhtml | Save or cancel file edits | Saves file upload/edit changes with EditDatafilesPage.save, cancels, or returns to the dataset. |
+| Edit files - editdatafiles.xhtml | Replace file mode | Initializes the edit files page in replace-file mode when selected by upstream navigation. |
+| Edit files - editFilesFragment.xhtml | Upload files from browser | Uses PrimeFaces fileUpload for browser and drag-drop uploads with upload completion handlers. |
+| Edit files - editFilesFragment.xhtml | Direct upload workflow | Requests direct upload URLs, handles external upload completion, and reports upload failures. |
+| Edit files - editFilesFragment.xhtml | Upload files from external services | Starts Webloader, Dropbox chooser, or Globus upload flows where enabled. |
+| Edit files - editFilesFragment.xhtml | Download edit-mode rsync script | Downloads an rsync script from the edit files page. |
+| Edit files - editFilesFragment.xhtml | Delete uploaded or selected files | Opens delete confirmations, deletes selected files, and handles upload/delete completion updates. |
+| Edit files - editFilesFragment.xhtml | Handle duplicate or type-conflict uploads | Shows duplicate-file and file-type-different dialogs, then deletes conflicting or duplicate uploads when confirmed. |
+| Edit files - editFilesFragment.xhtml | Restrict or unrestrict files | Opens the access popup or directly changes restriction state for selected files. |
+| Edit files - editFilesFragment.xhtml | Edit file metadata | Navigates to or opens file metadata editing for selected files. |
+| Edit files - editFilesFragment.xhtml | Edit file tags and categories | Opens tags popup, creates new categories, selects file tags and tabular data tags, removes unused tags, and saves changes. |
+| Edit files - editFilesFragment.xhtml | Edit file provenance | Opens the provenance popup for selected files. |
+| Edit files - editFilesFragment.xhtml | Set dataset thumbnail from file | Opens thumbnail selection or replacement confirmation and saves the selected data file as dataset thumbnail. |
+| Edit files - editFilesFragment.xhtml | Configure advanced ingest options | Opens advanced ingest options, selects ingest character encoding, uploads SPSS/POR labels, and saves options. |
+| File edit actions - file-edit-button-fragment.xhtml | Open edit metadata for file selection | Starts file metadata edit flow for a single file or selected files. |
+| File edit actions - file-edit-button-fragment.xhtml | Restrict or unrestrict from action menu | Opens restriction dialog or invokes configured unrestrict action for selected files. |
+| File edit actions - file-edit-button-fragment.xhtml | Ingest or uningest file | Lets privileged users ingest or uningest a file from the file action menu. |
+| File edit actions - file-edit-button-fragment.xhtml | Open file tag editor | Opens the tags and categories popup for a file or selected files. |
+| File edit actions - file-edit-button-fragment.xhtml | Open embargo editor | Opens the embargo popup for a file or selected files. |
+| File edit actions - file-edit-button-fragment.xhtml | Open retention editor | Opens the retention popup for a file or selected files. |
+| File edit actions - file-edit-button-fragment.xhtml | Open provenance editor | Opens the provenance popup for a file or selected files. |
+| File edit actions - file-edit-button-fragment.xhtml | Open delete file confirmation | Opens the delete confirmation for a file or selected files. |
+| File edit popup - file-edit-popup-fragment.xhtml | Save file restriction changes | Collects terms-of-access data and invokes the configured restrict-file action. |
+| File edit popup - file-edit-popup-fragment.xhtml | Save or clear embargo | Sets, removes, or clears embargo popup state through configured save and clear actions. |
+| File edit popup - file-edit-popup-fragment.xhtml | Save or clear retention | Sets, removes, or clears retention popup state through configured save and clear actions. |
+| File edit popup - file-edit-popup-fragment.xhtml | Delete file | Confirms and invokes the configured delete-file action. |
+| File configure - file-configure-dropdown-fragment.xhtml | Open file external-tool configuration | Shows configured file-level external tool choices and opens a configure popup. |
+| File configure - file-configure-popup-fragment.xhtml | Confirm external-tool configuration | Calls configureFragmentBean.configureExternalAlert for the selected tool. |
+| Provenance popup - provenance-popups-fragment.xhtml | Upload provenance JSON | Uploads provenance JSON through provPopupFragmentBean.handleFileUpload. |
+| Provenance popup - provenance-popups-fragment.xhtml | Preview or remove provenance JSON | Previews uploaded JSON in a new window or removes JSON and related data. |
+| Provenance popup - provenance-popups-fragment.xhtml | Map provenance entities | Selects or searches provenance entity names for assignment. |
+| Provenance popup - provenance-popups-fragment.xhtml | Edit provenance freeform text | Collects freeform provenance description text. |
+| Provenance popup - provenance-popups-fragment.xhtml | Confirm provenance changes | Stages provenance popup changes after user confirmation. |
+| File page - file.xhtml | View file details and metadata | Displays file citation, dataset citation, file metadata, data access, versions, provenance, and related dataset context. |
+| File page - file.xhtml | Download file and citations | Uses included download controls for file downloads and downloads file or dataset citation in XML, RIS, or BibTeX. |
+| File page - file.xhtml | Contact and share file | Opens contact and share dialogs for the file. |
+| File page - file.xhtml | Use file external tools | Selects and launches configured query, preview, explore, or package-aware external tools. |
+| File page - file.xhtml | Edit file from file page | Exposes edit, configure, restrict, ingest, tags, embargo, retention, provenance, and delete actions through included file action fragments. |
+| File page - file.xhtml | Show access denied or deleted messages | Displays dialogs when a previous version file has been deleted or compute/tool access is denied. |
+| File versions - file-versions.xhtml | Compare file versions | Selects two file versions and computes file-level version differences with FilePage.compareVersionDifferences. |
+| File versions - file-versions.xhtml | View file version difference details | Opens detail differences for file version comparison rows. |
+| File provenance - provenance/files_prov_tab.xhtml | Show provenance graph filters | Lets the user toggle ancestor and successor visibility in the provenance graph. |
+| File data access - file-data-access-fragment.xhtml | Show local and rsync data access commands | Displays local data access directory, rsync download commands, and verify-data command for non-draft datasets. |
+| Private URL - privateurl.xhtml | Resolve private URL token | Accepts a private URL token and initializes PrivateUrlPage to route to the target dataset preview. |
+| Private URL - previewurl.xhtml | Resolve preview URL token | Accepts a preview URL token and initializes PrivateUrlPage to route to the target preview. |
+| Embedded citation - iframe.xhtml | Render dataset citation iframe | Initializes dataset citation data and renders citation content inside a minimal iframe-oriented layout. |
+| Permissions - permissions-manage.xhtml | Configure access defaults | Opens access settings and configures authenticated-user contributor roles plus contributor role behavior. |
+| Permissions - roles-assign.xhtml | Assign role to users or groups | Searches/selects assignees, selects a role, previews role details, and assigns the role. |
+| Permissions - permissions-manage.xhtml | Remove role assignment | Confirms and removes an assigned role from a user or group. |
+| Permissions - roles-edit.xhtml | Create or edit role | Edits role name, alias, description, and permission set, then saves through managePermissionsPage.updateRole. |
+| Permissions - permissions-manage.xhtml | Clone role | Clones an existing role into the role editor for saving. |
+| Permissions - permissions-manage.xhtml | View role assignment history | Displays role assignment history and downloads it as CSV through a signed URL. |
+| Permissions - role_permission_helper.xhtml | View role permission helper | Displays role permission helper information after RolePermissionHelperPage.init. |
+| File permissions - permissions-manage-files.xhtml | View restricted files and requesters | Shows restricted files, pending access requests, existing assignments, and permission history. |
+| File permissions - permissions-manage-files.xhtml | Assign access to files | Opens assignment dialog, selects users or groups and files, and grants access. |
+| File permissions - permissions-manage-files.xhtml | Grant or reject access requests | Grants or rejects all requests for a file, or grants/rejects requests for a selected requester. |
+| File permissions - permissions-manage-files.xhtml | View and remove file role assignments | Views assignments by requester, role assignee, or file and removes selected assignments after confirmation. |
+| File permissions - permissions-manage-files.xhtml | Download file permission history | Downloads file role assignment history as CSV through a signed URL. |
+| Groups - manage-groups.xhtml | Create explicit group | Opens the explicit group dialog and creates a group with selected members. |
+| Groups - manage-groups.xhtml | View or edit group | Opens a group dialog, adds members, removes members, and saves explicit group changes. |
+| Groups - manage-groups.xhtml | Delete group | Confirms and deletes an explicit group. |
+| Templates - manage-templates.xhtml | Configure template inheritance | Toggles whether a dataverse inherits templates from its parent. |
+| Templates - manage-templates.xhtml | Set or clear default template | Marks a template as default or clears the default. |
+| Templates - manage-templates.xhtml | View template | Opens a read-only template preview dialog. |
+| Templates - manage-templates.xhtml | Clone template | Starts a clone flow from an existing template. |
+| Templates - manage-templates.xhtml | Delete template | Confirms and deletes a template. |
+| Template editor - template.xhtml | Create or edit template metadata | Edits template name and metadata fields and saves through TemplatePage.save. |
+| Template editor - template.xhtml | Create or edit template terms | Edits license and terms data for a template and saves, including create-mode add-terms flow. |
+| Template editor - template.xhtml | Cancel clone flow | Cancels clone mode by deleting the temporary cloned template. |
+| Guestbooks - manage-guestbooks.xhtml | Configure guestbook inheritance | Toggles whether a dataverse inherits guestbooks from its parent. |
+| Guestbooks - manage-guestbooks.xhtml | Download guestbook responses for dataverse | Streams all guestbook responses for the dataverse. |
+| Guestbooks - manage-guestbooks.xhtml | Enable or disable guestbook | Enables or disables a guestbook from the management list. |
+| Guestbooks - manage-guestbooks.xhtml | View guestbook | Opens the guestbook preview popup for a selected guestbook. |
+| Guestbooks - manage-guestbooks.xhtml | Download responses for one guestbook | Streams responses for a selected guestbook. |
+| Guestbooks - manage-guestbooks.xhtml | Delete guestbook | Confirms and deletes a guestbook. |
+| Guestbook editor - guestbook.xhtml | Create or edit guestbook identity fields | Configures guestbook name and required built-in respondent fields. |
+| Guestbook editor - guestbook.xhtml | Manage custom guestbook questions | Adds or removes custom questions and option values, and toggles question settings. |
+| Guestbook editor - guestbook.xhtml | Save guestbook | Saves the guestbook through GuestbookPage.save. |
+| Guestbook responses - guestbook-responses.xhtml | View guestbook responses | Displays responses for a dataverse guestbook. |
+| Guestbook responses - guestbook-responses.xhtml | Download guestbook responses | Streams guestbook responses for the selected dataverse and guestbook. |
+| Dashboard - dashboard.xhtml | Superuser dashboard navigation | Links to harvesting clients, harvesting server sets, API documentation, user management, move dataset, and move dataverse pages. |
+| Dashboard users - dashboard-users.xhtml | Search users | Searches users, sorts by selected fields, and paginates user search results. |
+| Dashboard users - dashboard-users.xhtml | Toggle superuser status | Uses a checkbox and confirmation dialog to save or cancel superuser status changes. |
+| Dashboard users - dashboard-users.xhtml | Remove all roles from user | Confirms and removes all roles assigned to a user. |
+| Dashboard move dataset - dashboard-movedataset.xhtml | Move dataset | Selects source/target dataverse context, validates, confirms, and moves a dataset. |
+| Dashboard move dataverse - dashboard-movedataverse.xhtml | Move dataverse | Selects source/target dataverse context, validates, confirms, and moves a dataverse. |
+| Superuser - superuser.xhtml | Reindex all | Starts a full reindex through SuperUserPage.startIndexAll. |
+| Superuser - superuser.xhtml | Refresh reindex status | Refreshes full reindex status through SuperUserPage.updateIndexAllStatus. |
+| Harvesting clients - harvestclients.xhtml | Create harvesting client wizard | Starts a new harvesting client, validates initial OAI settings, steps through set selection, scheduling, and final review, then creates the client. |
+| Harvesting clients - harvestclients.xhtml | Edit harvesting client | Loads an existing client into the wizard and saves changes. |
+| Harvesting clients - harvestclients.xhtml | Run harvest client | Starts harvesting for a selected client. |
+| Harvesting clients - harvestclients.xhtml | Delete harvesting client | Confirms and deletes a selected harvesting client. |
+| Harvesting clients - harvestclients.xhtml | Toggle client schedule | Enables or disables the schedule during client creation or editing. |
+| Harvesting server - harvestsets.xhtml | Toggle harvesting server | Enables or disables the OAI harvesting server. |
+| Harvesting server - harvestsets.xhtml | Create OAI set | Starts a new set, validates the search query, previews results, and creates the set. |
+| Harvesting server - harvestsets.xhtml | Edit OAI set | Loads an existing set, lets the query be revalidated, and saves changes. |
+| Harvesting server - harvestsets.xhtml | Export OAI set | Starts export for a selected OAI set. |
+| Harvesting server - harvestsets.xhtml | Delete OAI set | Confirms and deletes a selected OAI set. |
+| DataTags API test - datatags-api-test.xhtml | Request DataTags interview | Temporary API tester that collects a dataset name and calls dataTagsAPITestingBean.requestInterview. |
+| DataTags API test - datatags-api-test-deposit-complete.xhtml | Display DataTags results | Temporary API tester completion page that shows submitted dataset name and returned tags. |
+| Maintenance page - doc/sphinx-guides/source/_static/installation/files/etc/maintenance/maintenance.xhtml | Static maintenance notice | Documentation/static maintenance XHTML page with branding, service interruption notice, support email, and project link; not part of src/main/webapp runtime JSF actions. |
