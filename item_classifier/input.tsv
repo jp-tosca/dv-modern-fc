@@ -1,0 +1,50 @@
+Title	URL	Assignees	Milestone	Labels	Repository	Linked pull requests	Sub-issues progress	Status
+Fix shib-dev-env	https://github.com/IQSS/dataverse-frontend/issues/819			"bug, FY26 Sprint 6, FY26 Sprint 7, FY26 Sprint 8, FY26 Sprint 9, GREI Re-arch, Original size: 10, Size: 10, SPA, SPA.Q3.2025"	IQSS/dataverse-frontend			
+[Spike] - Modernized Harvard Dataverse UI Plan	https://github.com/IQSS/dataverse-frontend/issues/806			"GREI Re-arch, SPA.Q3.2025.17, Waiting"	IQSS/dataverse-frontend			
+Dataset Page: display Dataset Locked message during file ingest	https://github.com/IQSS/dataverse-frontend/issues/784			"GREI Re-arch, Original size: 10, Size: 10, SPA: Dataset page (View), SPA.Q3.2025"	IQSS/dataverse-frontend			
+Feature Request: Add Template APIs for SPA	https://github.com/IQSS/dataverse/issues/11453			"Feature: API, GREI Re-arch, SPA, SPA.Q2, SPA.Q3.2025.12, SPA.Q4.2025.1, Type: Feature"	IQSS/dataverse		5 / 6 (83%)	
+New single general API endpoint to expose settings based on a new grouping and naming	https://github.com/IQSS/dataverse/pull/10126			"pm.GREI-d-2.7.1, pm.GREI-d-2.7.2, Size: 30, SPA, Status: Needs Input, Type: Feature"	IQSS/dataverse			
+OIDC Integration: Problem Provisioning a Provider via JVM	https://github.com/IQSS/dataverse-frontend/issues/565			"GREI Re-arch, Waiting"	IQSS/dataverse-frontend			
+Fix github package registry deployment issues on PRs	https://github.com/IQSS/dataverse-client-javascript/issues/211			"bug, GREI Re-arch, Original size: 3, Size: 3"	IQSS/dataverse-client-javascript			
+Add coverage run github action step	https://github.com/IQSS/dataverse-client-javascript/issues/208			"GREI Re-arch, Original size: 3, Size: 3, SPA.Q4.10"	IQSS/dataverse-client-javascript			
+"As a Dataverse collection admin, I want to use the UI to link harvested datasets into my collection"	https://github.com/IQSS/dataverse/issues/4025			"D: Linking Data in DV Issues, Feature: Harvesting, SPA, Type: Feature, User Role: Curator, UX & UI: Design"	IQSS/dataverse			
+OIDC: enable mapping `groups` claim to user groups	https://github.com/IQSS/dataverse/issues/9969			"Feature: Account & User Info, Feature: Admin Guide, Feature: API, Feature: Installation Guide, Feature: Permissions, Needs Backend Design, SPA"	IQSS/dataverse			
+[Spike - API] Ensure all dates are UTC	https://github.com/IQSS/dataverse/issues/9979			"Size: 3, SPA, Type: Suggestion"	IQSS/dataverse			
+Add Schema.org or Croissant metadata to header of Dataset view page	https://github.com/IQSS/dataverse-frontend/issues/350			"FY24 Sprint 26, GREI Re-arch, pm.GREI-d-2.7.1, pm.GREI-d-2.7.2, Size: 10, SPA: Dataset page (View), Waiting"	IQSS/dataverse-frontend	https://github.com/IQSS/dataverse-frontend/pull/412		
+Feature Request/431 file upload page missing features	https://github.com/IQSS/dataverse-frontend/issues/431			"enhancement, GREI Re-arch, integration, SPA: File Upload Page"	IQSS/dataverse-frontend			
+FileRepository e2e tests failing	https://github.com/IQSS/dataverse-frontend/issues/465			"GREI Re-arch, SPA, tests"	IQSS/dataverse-frontend			
+Fix branch test coverage in classes with 0% coverage and restore branch expected coverage back to 95%	https://github.com/IQSS/dataverse-client-javascript/issues/186			"bug, GREI Re-arch, Size: 10"	IQSS/dataverse-client-javascript			
+Highlight search text in collection page results	https://github.com/IQSS/dataverse-frontend/issues/513			"SPA, SPA: Collection Page, UI"	IQSS/dataverse-frontend			
+Group list paging	https://github.com/IQSS/dataverse/issues/7933			"Feature: Account & User Info, Feature: Performance & Stability, SPA, Type: Feature, User Role: Curator, UX & UI: Design"	IQSS/dataverse			
+Rich Text Editor -  formatted list buttons and header tags unexpected behavior	https://github.com/IQSS/dataverse-frontend/issues/585			"bug, GREI Re-arch, SPA.Q1"	IQSS/dataverse-frontend			
+Upload File Page - does not handle duplicate files correctly	https://github.com/IQSS/dataverse-frontend/issues/584			"GREI Re-arch, SPA: File Upload Page"	IQSS/dataverse-frontend			
+Edit Dataset Page: Analyze options to improve textbox fields	https://github.com/IQSS/dataverse-frontend/issues/592			"GREI Re-arch, SPA: Edit Dataset Page"	IQSS/dataverse-frontend			
+Native API: Get InstallationName	https://github.com/IQSS/dataverse/issues/9391			"Feature: API, Hackathon: More APIs, SPA, Type: Feature, User Role: API User, UX & UI: New React UI"	IQSS/dataverse			
+Feature Request/Idea: Export metadatablock definition per Dataverse collection	https://github.com/IQSS/dataverse/issues/9477			"Feature: API, SPA, Type: Feature, User Role: API User"	IQSS/dataverse			
+API endpoint - SPA Users Feedback	https://github.com/IQSS/dataverse/issues/11456			"GREI Re-arch, Original size: 20, Size: 20, SPA, SPA.Q2.8"	IQSS/dataverse			
+Coveralls: code coverage can change unexpectedly	https://github.com/IQSS/dataverse-frontend/issues/705			"GREI Re-arch, SPA.Q2, tests"	IQSS/dataverse-frontend			
+Integrate Get Analytics Use Case	https://github.com/IQSS/dataverse-frontend/issues/670			"FY25 Sprint 23, FY25 Sprint 24, FY25 Sprint 25, FY25 Sprint 26, FY26 Sprint 1, FY26 Sprint 2, FY26 Sprint 3, GREI Re-arch, Original size: 20, Size: 20, SPA.Q2.12, Waiting"	IQSS/dataverse-frontend			
+Get Analytics HTML Use Case	https://github.com/IQSS/dataverse-client-javascript/issues/295			"FY25 Sprint 23, FY25 Sprint 24, FY25 Sprint 25, FY25 Sprint 26, FY26 Sprint 1, FY26 Sprint 2, FY26 Sprint 3, GREI Re-arch, Original size: 10, Size: 10, SPA.Q3.2025"	IQSS/dataverse-client-javascript			
+Dataset Page: Edit Terms	https://github.com/IQSS/dataverse-frontend/issues/827			"GREI Re-arch, SPA.Q3.2025.3"	IQSS/dataverse-frontend		6 / 6 (100%)	
+Feature Request: Design and implement SPA view to see list of file/dataset history of access requests	https://github.com/IQSS/dataverse-frontend/issues/895			"Size: 30, SPA"	IQSS/dataverse-frontend			
+Use bearer token authentication for file downloads	https://github.com/IQSS/dataverse-client-javascript/issues/412			"GREI Re-arch, Project: HDV SPA Rollout, Size: 10"	IQSS/dataverse-client-javascript			
+Create Dataset: include templateId when saving dataset	https://github.com/IQSS/dataverse-frontend/issues/917			GREI Re-arch	IQSS/dataverse-frontend			
+Edit Dataset: Display Custom Instructions from Template	https://github.com/IQSS/dataverse-frontend/issues/918			GREI Re-arch	IQSS/dataverse-frontend			
+"Inconsistent behaviour ""Terms of Access for Restricted Files"" field does not appear "	https://github.com/IQSS/dataverse/issues/10731			"Requested SPA Improvement, SPA, Type: Bug"	IQSS/dataverse			
+MyData API returns error for dataverseAdmin user on QA	https://github.com/IQSS/dataverse/issues/12385			"SPA, Type: Bug"	IQSS/dataverse			
+File Upload: support Upload of folder (DVWebUploader feature)	https://github.com/IQSS/dataverse-frontend/issues/993			"GREI Re-arch, SPA: File Upload Page"	IQSS/dataverse-frontend			
+Extend updateCollection use case to include displayOnCreate input level	https://github.com/IQSS/dataverse-client-javascript/issues/455			GREI Re-arch	IQSS/dataverse-client-javascript			
+File Citation Download: should be version aware	https://github.com/IQSS/dataverse-frontend/issues/1011			"GREI Re-arch, Size: 3"	IQSS/dataverse-frontend			
+Extend GetCollectionItems use case: add show_relevance	https://github.com/IQSS/dataverse-client-javascript/issues/464			"GREI Re-arch, SPA"	IQSS/dataverse-client-javascript			
+Search API: strip html from file description in search results	https://github.com/IQSS/dataverse/issues/12534			"GREI Re-arch, SPA"	IQSS/dataverse			
+Dataset Page: Getting Dataset with Preview URL results in 404 error	https://github.com/IQSS/dataverse-frontend/issues/1025			GREI Re-arch	IQSS/dataverse-frontend			
+Upload File API: allow uploads before dataset is created	https://github.com/IQSS/dataverse/issues/12542			"GREI Re-arch, SPA"	IQSS/dataverse			
+Performance: notification/unreadCount polling can fire multiple times per second	https://github.com/IQSS/dataverse-frontend/issues/1098			"performance, SPA"	IQSS/dataverse-frontend			
+Feature Complete: Link Search	https://github.com/IQSS/dataverse-frontend/issues/1114			"SPA Feature Complete, Superuser"	IQSS/dataverse-frontend			
+Feature Complete: Support contact or User Guide link	https://github.com/IQSS/dataverse-frontend/issues/1115			SPA Feature Complete	IQSS/dataverse-frontend			
+Feature Complete: Notification settings pannel	https://github.com/IQSS/dataverse-frontend/issues/1120			SPA Feature Complete	IQSS/dataverse-frontend			
+Feature Complete: Publish warning is incomplete	https://github.com/IQSS/dataverse-frontend/issues/1121			SPA Feature Complete	IQSS/dataverse-frontend			
+Feature Complete: Publish Collection confirmation dialog bug. 	https://github.com/IQSS/dataverse-frontend/issues/1123			"SPA Feature Complete, Type: Bug"	IQSS/dataverse-frontend			
+"Feature Complete: Account Information is read-only in the new frontend: no edit, password change or email verification"	https://github.com/IQSS/dataverse-frontend/issues/1125		0.7.0	"Original size: 50, Size: 50, SPA Feature Complete"	IQSS/dataverse-frontend			
+Feature Complete: Dataset and file permissions management	https://github.com/IQSS/dataverse-frontend/issues/1126			SPA Feature Complete	IQSS/dataverse-frontend			
+Proof of Concept: external vocab use cases	https://github.com/IQSS/dataverse-client-javascript/pull/472		0.6.0	"Size: 10, SPA"	IQSS/dataverse-client-javascript			

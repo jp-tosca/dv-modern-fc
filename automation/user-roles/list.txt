@@ -1,0 +1,627 @@
+=== IQSS/dataverse#12451  [open]  API Retrieve Guestbook Responses for a Dataverse Collection in JSON format
+labels: Feature: Guestbook, Size: 10, SPA, GREI Re-arch, Status: Waiting for Related Issues/PRs, FY27 Sprint 7, FY27 Sprint 8
+When a sub-collection uses guestbooks inherited from its parent collection, we need to retrieve the guestbook responses using a specific Dataverse collection ID.
+We have an api similarly but in csv format [Retrieve Guestbook Responses for a Dataverse Collection](https://guides.dataverse.org/en/latest/api/native-api.html#id72) in Native API, but we also need return responses in JSON format.
+Can we extend this API to support a Dataverse collection ID as well?
+`curl -H  "X-Dataverse-key:$API_TOKEN" ...
+
+=== IQSS/dataverse#11974  [open]  Create Dataset API: add termsOfUse to DatasetDTO
+labels: Size: 10, SPA, GREI Re-arch, SPA.Q4.2025.1
+The DatasetDTO sent for create dataset API needs to include terms of use, in order to support creating a dataset that is based on a template with customized terms of use.
+
+=== IQSS/dataverse-frontend#819  [open]  Fix shib-dev-env
+labels: bug, Size: 10, GREI Re-arch, SPA, Original size: 10, SPA.Q3.2025, FY26 Sprint 6, FY26 Sprint 7, FY26 Sprint 8, FY26 Sprint 9
+**Overview of the Feature Request**
+After the latest updates in Dataverse, Keycloak, and the SPI, shib-dev-env is not working. We need to update the environment to be compatible with the latest versions in the architecture.
+Although it is not an environment used regularly, it is a use case of Shib configured directly as a SAML IdP provider in Keycloak, and it is useful to keep this example available for possible future scenarios that may seek to replicate it.
+**What kind of user is the feature i ...
+
+=== IQSS/dataverse-frontend#806  [open]  [Spike] - Modernized Harvard Dataverse UI Plan
+labels: Waiting, GREI Re-arch, SPA.Q3.2025.17
+## Overview
+Analyze the Harvard Dataverse UI proposed in: https://github.com/IQSS/dataverse-pm/issues/401 as input to an eventual implementation plan.
+- [Redesign Analysis](https://docs.google.com/document/d/1XWby6iGhVXqgLHarvbKeWiIrwWko6eX4cL5HJMumEHU/edit?usp=sharing)
+
+=== IQSS/dataverse-frontend#784  [open]  Dataset Page: display Dataset Locked message during file ingest
+labels: Size: 10, SPA: Dataset page (View), GREI Re-arch, Original size: 10, SPA.Q3.2025
+When file is being ingested, the Dataset is locked, and the Publish Dataset and Edit Dataset options are disabled.  In addition to this, we also need to display a message on the Dataset Page, to match the JSF page: 
+<img width="1251" height="656" alt="Image" src="https://github.com/user-attachments/assets/2b325066-57bc-460d-baf5-bcf485c13a7e" />
+We should also add a polling mechanism so that the page is updated when the ingest is completed.
+
+=== IQSS/dataverse#11453  [open]  Feature Request: Add Template APIs for SPA
+labels: Type: Feature, Feature: API, SPA, GREI Re-arch, SPA.Q2, SPA.Q3.2025.12, SPA.Q4.2025.1
+**Overview of the Feature Request** 
+SPA needs to be able to access the collection's list of dataset templates. Currently this is done through the ManageTemplatesPage and TemplatePage. There are no non-admin APIs to match this functionality. 
+This feature aims to provide a set of new endpoints for listing, creating, editing, and managing templates directly through the API.
+Native APIs:
+GET list of templates /api/dataverses/{dataverseAlias}/templates
+POST a new template /api/dataverses/{dataverse ...
+
+=== IQSS/dataverse#11090  [open]  Provision a Provider via JVM: provider data is not being added to authenticationproviderrow
+labels: Type: Bug, Feature: Superuser Dashboard, SPA, GREI Re-arch, Original size: 30
+**What steps does it take to reproduce the issue?**
+The issue was encountered in the SPA OIDC integration code: https://github.com/IQSS/dataverse-frontend/issues/565
+The easiest way to recreate the issue is to setup the SPA development environment described in issue [565](https://github.com/IQSS/dataverse-frontend/issues/565)
+After running `./run-env.sh 10959-bearer-token-auth-ext`, check the Postgres table `authenticationproviderrow`.   It should contain a row for the OIDC provider, but it o ...
+
+=== IQSS/dataverse-frontend#565  [open]  OIDC Integration: Problem Provisioning a Provider via JVM
+labels: Waiting, GREI Re-arch
+The Dataverse configuration sets up an OIDC Provider, but it doesn't add a row to authenticationproviderrow, there for the user is not visible in the  Dataverse Dashboard ->Manage Users View.  
+**What steps does it take to reproduce the issue?**
+**Step 1: Run the Development Environment**
+1. Execute npm i.
+2. Navigate with cd packages/design-system && npm i && npm run build.
+3. Return with cd ../../.
+4. Ensure you have a .env file similar to .env.example, with the variable VITE_DATAVERSE_B ...
+
+=== IQSS/dataverse-client-javascript#211  [open]  Fix github package registry deployment issues on PRs
+labels: bug, Size: 3, GREI Re-arch, Original size: 3
+Sometimes the deployment GitHub Action to github package registry fails on PRs, indicating that the version generated by the commit has already been deployed and cannot be overwritten. The goal is to fix this problem.
+
+=== IQSS/dataverse-client-javascript#208  [open]  Add coverage run github action step
+labels: Size: 3, GREI Re-arch, Original size: 3, SPA.Q4.10
+## Overview of the feature request
+Just as we run tests to be able to deploy the package in GitHub Package Registry, we need to verify that test coverage remains within acceptable limits. The goal is to create the github action / step responsible for this.
+## What inspired the request?
+Frontend standup discussion
+## What existing behavior do you want changed?
+None
+## Any brand new behavior do you want to add to js-dataverse?
+None
+## Any open or closed issues related to this feature reque ...
+
+=== IQSS/dataverse#4025  [open]  As a Dataverse collection admin, I want to use the UI to link harvested datasets into my collection
+labels: Type: Feature, UX & UI: Design, Feature: Harvesting, User Role: Curator, D: Linking Data in DV Issues, SPA
+ALREADY LABELLED: User Role: Curator
+
+
+=== IQSS/dataverse#9969  [open]  OIDC: enable mapping `groups` claim to user groups
+labels: Feature: API, Feature: Permissions, Feature: Account & User Info, Feature: Installation Guide, Feature: Admin Guide, SPA, Needs Backend Design
+**Overview of the Feature Request**
+Currently, we cannot make the OIDC provider put remote users into certain groups based on the `groups` claim that can be received from an identity provider. This is crucial for SPA functionality and other use cases.
+**What kind of user is the feature intended for?**
+Sysadmin
+**What inspired the request?**
+The upcoming SPA and working on #9268
+**What existing behavior do you want changed?**
+Map users to groups using admin specified configuration.
+**Any  ...
+
+=== IQSS/dataverse#9979  [open]  [Spike - API] Ensure all dates are UTC
+labels: Type: Suggestion, Size: 3, SPA
+**Overview of the Feature Request**
+This spike was triggered by a discussion of how to present dates in the SPA. We would like all dates being returned from the API to be UTC.  The UI can convert those dates to the user's local timezone. Part of what is to be researched is how the dates are stored in Postgres, because that will affect the logic of APIs that handle dates.  The current assumption is that all dates are stored as UTC, but we want to confirm that.
+**What kind of user is the feature ...
+
+=== IQSS/dataverse#7623  [open]  Dataverse creation, metadata block: I want to change from using the "Installation metadata default settings" at any point in my workflow in customizing metadata for my Dataverse collection
+labels: Feature: Metadata, Type: Bug, Feature: Dataverse General Info, SPA, Requested SPA Improvement
+workflow:
+- Create dataverse collection
+- Go to "Metadata Fields" section of the page
+- Make sure that "Use Harvard Dataverse metadata settings" is checked
+- Click on "Citation" metadata block and "view" link to see the fields, and make one or more fields required
+- Uncheck "use Harvard Dataverse metadata settings"
+- Citation metadata should update to allow me to make fields required, but it does not. See image below.
+<img width="1337" alt="Screen Shot 2021-02-12 at 5 21 39 PM" src="https://user ...
+
+=== IQSS/dataverse-frontend#350  [open]  Add Schema.org or Croissant metadata to header of Dataset view page
+labels: Size: 10, pm.GREI-d-2.7.1, pm.GREI-d-2.7.2, SPA: Dataset page (View), Waiting, GREI Re-arch, FY24 Sprint 26
+Currently the JSF Dataset page has schema.org info embedded in the header, which in the future may be replaced with Croissant.  The SPA version of the page has to replicate this.
+Here is what it looks like in the JSF Header:
+```
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Dataset","@id":"https://doi.org/10.5072/FK2/SCYB0O","identifier":"https://doi.org/10.5072/FK2/SCYB0O","name":"Testing embargo","creator":[{"@type":"Person","givenName":"Guillermo","familyName" ...
+
+=== IQSS/dataverse-frontend#431  [open]  Feature Request/431 file upload page missing features
+labels: enhancement, integration, SPA: File Upload Page, GREI Re-arch
+**Overview of the Feature Request**
+This issue summarizes the remaining work needed to have a fully featured file upload functionality in the new SPA UI.
+Follow-up to the PR #418:
+- [x] #481
+- [ ] use the new SelectMultiple component for tag selection
+- [x] implement handling of the duplicate files having either an identical content or label+name
+- [x] extend the interface of the add uploaded files call in the js-dataverse library to accept more parameters, like tags, description, etc., and make ...
+
+=== IQSS/dataverse-frontend#465  [open]  FileRepository e2e tests failing
+labels: tests, GREI Re-arch, SPA
+After updating branches with `develop` branch and the new S3 containerized environment some e2e tests from the File JSDataverse Repository are failing.
+These tests sometimes fail, not always and they fail both in my local environment and in Github actions.
+- Test `'gets all the files by dataset persistentId after dataset deaccession'` has a fix by incrementing the `defaultCommandTimeout` to `10_000` in the `cypress.config.ts` file.
+- Tests `gets all the files by dataset persistentId when file ...
+
+=== IQSS/dataverse-client-javascript#186  [open]  Fix branch test coverage in classes with 0% coverage and restore branch expected coverage back to 95%
+labels: bug, Size: 10, GREI Re-arch
+The pre-commit hook was failing because it expected 95% branch coverage, but certain classes (GetCollection and GetCollectionFacets) were showing 0% branch coverage, even though we have test cases that should cover these branches.
+To temporarily resolve this issue, we lowered the required branch coverage to 90% for the pre-commit hook to pass. However, we need to investigate the cause of this discrepancy, fix the issue, and restore the required branch coverage back to 95%
+![Screenshot 2024-09- ...
+
+=== IQSS/dataverse-frontend#513  [open]  Highlight search text in collection page results
+labels: UI, SPA: Collection Page, SPA
+Highlight words within the cards displayed in the items of a collection when a search is performed.
+It could be a good opportunity to use the [mark](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark) html tag.
+<img width="600" alt="372247287-2ae3445b-3f92-4f9a-ad20-534a358e0928" src="https://github.com/user-attachments/assets/a5b3b5b2-3e4d-4699-92f1-1378c8076eba">
+
+=== IQSS/dataverse#7933  [open]  Group list paging
+labels: Type: Feature, UX & UI: Design, Feature: Performance & Stability, Feature: Account & User Info, User Role: Curator, SPA
+ALREADY LABELLED: User Role: Curator
+We use the Shibboleth authorization in our Dataverse installation and we preload the research users and assign them to a researchers  group that has the proper role. We currently have preloaded aprox 5000 researchers and notice very slow performance when editing the group in Dataverse. The action times out a couple of times before showing the list of members.
+Any changes to the group results in a reload of the data. The save and cancel buttons are located on the bottom of the screen and thus re ...
+
+=== IQSS/dataverse-frontend#585  [open]  Rich Text Editor -  formatted list buttons and header tags unexpected behavior
+labels: bug, GREI Re-arch, SPA.Q1
+### When does this issue occur?
+In the Rich Text Editor
+### Which page(s) does it occur on?
+Edit Feature Items
+### What happens?
+To reproduce:
+Format some text using the Header Tags (H1, H2 or H3). Then choose one of the list buttons (bulleted or numbered). The list format is applied, but the Header tag is removed, and the text reverts to normal text format.  
+The same thing happens in the reverse order. If you apply a list format to text, then also apply a Header format, the header format is ap ...
+
+=== IQSS/dataverse-frontend#584  [open]  Upload File Page - does not handle duplicate files correctly
+labels: SPA: File Upload Page, GREI Re-arch
+**What steps does it take to reproduce the issue?**
+Upload a file to a dataset, and then within the same Upload form, try to upload the file again.  The UI should present a warning that the file is a duplicate, then if the user allows the upload, then the second file should be renamed. For example - 
+[JSF Duplicate File Upload ](https://github.com/user-attachments/assets/e10fd3a3-854b-4a74-bfbf-d20b05da4e09)
+- When does this issue occur?
+Uploading a duplicate file to a dataset
+- Which page(s) do ...
+
+=== IQSS/dataverse-frontend#592  [open]  Edit Dataset Page: Analyze options to improve textbox fields
+labels: SPA: Edit Dataset Page, GREI Re-arch
+In the Edit Dataset Page, all metadata fields and term fields that are type textbox allow a subset of html tags. In the JSF, only the Description field has help text about using html:
+![Image](https://github.com/user-attachments/assets/a542a1ea-138f-4b73-b5ff-b775a988e506)
+It would be good to include help text or other visual clues to all textboxes in the Metadata and Term Tabs, that give a hint that html can be used.
+One possible way would be to include pre-filled text with tags:
+![Image](https ...
+
+=== IQSS/dataverse#9391  [open]  Native API: Get InstallationName
+labels: Type: Feature, Feature: API, User Role: API User, UX & UI: New React UI, Hackathon: More APIs, SPA
+ALREADY LABELLED: User Role: API User
+**Overview of the Feature Request**
+Extend the `api/info/server` endpoint to return the Dataverse Installation name
+**What kind of user is the feature intended for?**
+All users roles
+**What inspired the request?**
+In the [Dataverse plugin for OJS](https://github.com/lepidus/dataversePlugin), it is necessary to inform the user which Dataverse installation is configured in the application.
+As discussed in the [dataverse-community Google Group](https://groups.google.com/g/dataverse-community/ ...
+
+=== IQSS/dataverse#9477  [open]  Feature Request/Idea: Export metadatablock definition per Dataverse collection
+labels: Type: Feature, Feature: API, User Role: API User, SPA
+ALREADY LABELLED: User Role: API User
+**Overview of the Feature Request**
+Currently the Native API supports the export of an overview of metadatablocks and a detailed view using `.../metadatablocks` and `.../metadatablocks/$blockID` respectively. Same applies to Dataverse collections, but these are missing the detailed view. Hence, it would be a valuable addition to the Native API to allow the export of a metadatablock on this level, since it helps capturing custom settings.   
+**What kind of user is the feature intended for?**
+A ...
+
+=== IQSS/dataverse#11456  [open]  API endpoint - SPA Users Feedback
+labels: SPA, GREI Re-arch, Size: 20, Original size: 20, SPA.Q2.8
+We need an API endpoint that allows users to give feedback on a specific page or in general (bugs, suggestions, etc).
+The idea is that they can send feedback through a form only when they are logged in.
+**_This feature is only for the SPA mvp release in the Harvard installation._**
+How to address this?  
+1. Using the existing [Dataverse Support Email](https://guides.dataverse.org/en/6.6/installation/config.html#dataverse-mail-support-email) ?
+2. Create a new API endpoint just for the Harvard ins ...
+
+=== IQSS/dataverse-frontend#705  [open]  Coveralls: code coverage can change unexpectedly
+labels: tests, GREI Re-arch, SPA.Q2
+Analyze what is happening to cause our code coverage to go change unexpectedly.  Possible cause: using randomized faker data that may change the branches in the code that are being executed.
+
+=== IQSS/dataverse#11625  [open]  Feature Request: Enhance Dataverse Caching for Dataset Version Summary
+labels: Type: Feature, Size: 210, SPA, GREI Re-arch, SPA.Q2
+In order to speed up the getting of Dataset Version Differences/Summary a cache will be used.
+Also see https://github.com/IQSS/dataverse/issues/11503 for information regarding this ask.
+Currently we have a CacheManager that handles the rate limiting data. This manager can be extended to cache json responses and store them in the Postgres database.
+Some steps that need to be accomplished are:
+1. create a table in the database to hold the json responses. 
+CREATE IF NOT EXISTS UNLOGGED TABLE cache  ...
+
+=== IQSS/dataverse-frontend#670  [open]  Integrate Get Analytics Use Case
+labels: Waiting, GREI Re-arch, Original size: 20, Size: 20, SPA.Q2.12, FY25 Sprint 23, FY25 Sprint 24, FY25 Sprint 25, FY25 Sprint 26, FY26 Sprint 1, FY26 Sprint 2, FY26 Sprint 3
+Get the analytics.html from the installation and if present, inject it in the SPA `<head/>`.
+To test this we will need to start from this [harvard installation analytics](https://github.com/IQSS/dataverse.harvard.edu/blob/master/customization/analytics-code.html) and modify it to work for SPA element selectors. 
+Note that we should not add click listeners to the buttons as they might no be mounted when the script runs, so we should add a listener to the body and delegate events through data-sele ...
+
+=== IQSS/dataverse-client-javascript#295  [open]  Get Analytics HTML Use Case
+labels: Size: 10, GREI Re-arch, Original size: 10, FY25 Sprint 23, FY25 Sprint 24, FY25 Sprint 25, FY25 Sprint 26, FY26 Sprint 1, SPA.Q3.2025, FY26 Sprint 2, FY26 Sprint 3
+Create a new use case to get the analytics.html file of the installation. See [Dataverse Guides.](https://guides.dataverse.org/en/latest/installation/config.html#web-analytics-code)
+
+=== IQSS/dataverse-frontend#827  [open]  Dataset Page: Edit Terms
+labels: GREI Re-arch, SPA.Q3.2025.3
+2025 Q3 Feature.
+Replicate JSF Edit Terms page.
+This page includes three main update actions: “Dataset Terms”, “Restricted Files + Terms of Access”, and “Guestbook”. As discussed during the July 3rd Frontend weekly meeting, this might be a good opportunity to split these sections into separate tabs, each with its own save button and to consider renaming the “Edit Terms” option in the Edit Dataset dropdown, or even a completely different than this one, that analysis/research will be done in #799  ...
+
+=== IQSS/dataverse#12528  [open]  API for assigning guestbook to dataset should create a draft version
+labels: Type: Bug, Feature: Guestbook, Size: 3, SPA, GREI Re-arch
+**What steps does it take to reproduce the issue?**
+The PUT /api/datasets/{identifier}/guestbook API currently updates the dataset-level guestbook_id directly without creating a dataset draft version.
+* Which page(s) does it occurs on?
+* What happens?
+* To whom does it occur (all users, curators, superusers)?
+* What did you expect to happen?
+a new draft version should be created with the assigned guestbook, rather than assigning it to the published version.
+**Which version of Dataverse are you u ...
+
+=== IQSS/dataverse-frontend#895  [open]  Feature Request: Design and implement SPA view to see list of file/dataset history of access requests
+labels: Size: 30, SPA
+**Overview of the Feature Request** Create a view for users to see the full list of file/dataset access requests (not just created requests waiting for acceptance or rejection). A new set of parameters are being added to the /datafile/{id}/listRequests API to return all of the requests for file access as well as pagination to limit longer lists
+* `includeHistory` When `true` this will force the return of all requests and not just the "created" ones.
+* `start` For pagination, use this to request  ...
+
+=== IQSS/dataverse-client-javascript#412  [open]  Use bearer token authentication for file downloads
+labels: Size: 10, GREI Re-arch, Project: HDV SPA Rollout
+Currently in the SPA, file downloads are implemented by calling the API directly with a downloadURL.  This doesn't work with bearer token authentication, so we need to create a use case for file download that can be called from the SPA.
+
+=== IQSS/dataverse-frontend#917  [open]  Create Dataset: include templateId when saving dataset
+labels: GREI Re-arch
+When a dataset is created using a template, the createDataset API  should include the templateId.
+Depends on: https://github.com/IQSS/dataverse-client-javascript/issues/420
+
+=== IQSS/dataverse-frontend#918  [open]  Edit Dataset: Display Custom Instructions from Template
+labels: GREI Re-arch
+The Edit Dataset form needs to be updated to display the template custom instructions, if the dataset was created with a template.
+
+=== IQSS/dataverse#10731  [open]  Inconsistent behaviour "Terms of Access for Restricted Files" field does not appear 
+labels: Type: Bug, SPA, Requested SPA Improvement
+**What steps does it take to reproduce the issue?**
+As a logged in user, click on the File Access menu and select "request access" and do not select the file checkbox. 
+* When does this issue occur?
+Issue occurs when the file checkbox is not selected, and you use the File Access menu and click "Request access"
+![image](https://github.com/user-attachments/assets/eeaedb50-fc72-4e44-9637-59b009e9e4b7)
+* Which page(s) does it occurs on?
+Dataset landing page
+* What happens?
+The "Terms of Acce ...
+
+=== IQSS/dataverse-frontend#937  [open]  Upload File Page - Storage Quota Improvements
+labels: Size: 3, SPA: File Upload Page, GREI Re-arch, SPA, SPA.Q1.2026.3
+**Overview of the Feature Request**
+Following up on our discussion about the storage quota/upload limit (see https://github.com/IQSS/dataverse-frontend/pull/921), @jp-tosca shared some suggestions that could improve the user experience. 
+- Add detailed error message and show the total size of collection
+  <kbd><img width="2266" height="544" alt="Image" src="https://github.com/user-attachments/assets/7a456e73-2ea6-41d1-b01e-a9c724274821" /></kbd>
+- Add a "Done" button 
+  <kbd><img width="948" hei ...
+
+=== IQSS/dataverse#12330  [open]  "Download All Responses" button and API endpoint for retrieving guestbook responses time out when used to get responses from certain collections
+labels: Feature: API, Type: Bug, Feature: Guestbook, SPA, GREI Re-arch, Size: 20
+**What steps does it take to reproduce the issue?**
+* **When does this issue occur?**
+When trying to get all guestbook responses for a collection by:
+  - Going to the collection's "Manage Dataset Guestbooks" page and clicking "Download All Responses"
+  - Using the Retrieve Guestbook Responses for a Dataverse Collection API endpoint described at https://guides.dataverse.org/en/6.9/api/native-api.html#retrieve-guestbook-responses-for-a-dataverse-collection
+* **Which page(s) does it occurs on?**
+   ...
+
+=== IQSS/dataverse-frontend#983  [open]  Define feature complete
+labels: Size: 10, GREI Re-arch, SPA, Original size: 10, FY26 Sprint 22, FY26 Sprint 23, FY26 Sprint 24, FY26 Sprint 25, FY26 Sprint 26, FY27 Sprint 1, FY27 Sprint 2, FY27 Sprint 3, FY27 Sprint 4, FY27 Sprint 5, FY27 Sprint 6, FY27 Sprint 7, FY27 Sprint 8
+Provide a detailed definition of the complementary features based on [Modern roadmap](https://demo.dataverse.org/modern/featured-item/test-featured-item-collection/3) 
+- [ ] [Feature complete](https://docs.google.com/document/d/1OZOw0niLnl3Gc70YLc_YXhltWlf_9kqiWwdXOJ2M8bk/edit?tab=t.0)
+- [x] [proposal of Q2 ](http://docs.google.com/document/d/1JYQ5tzIH2SMWJtIXWfxoDsPtu55dRswT9lSYvg0rZ3o/edit?pli=1&tab=t.0#heading=h.yb2gnbv5pvzr)
+
+=== IQSS/dataverse#12385  [open]  MyData API returns error for dataverseAdmin user on QA
+labels: Type: Bug, SPA
+**What steps does it take to reproduce the issue?**
+1. Login as dataverseAdmin on QA,  on the Modern UI or JSF frontend
+2. Go to the MyData Page
+3. The MyData API call returns an error
+ MyData API endpoint:
+https://qa.dataverse.org/api/v1/mydata/retrieve?per_page=10&selected_page=1&role_ids=2&role_ids=3&role_ids=4&role_ids=5&role_ids=8&role_ids=12&role_ids=6&role_ids=13&role_ids=7&role_ids=1&userIdentifier=dataverseAdmin&dvobject_types=Dataverse&dvobject_types=Dataset&published_states=Published& ...
+
+=== IQSS/dataverse-frontend#993  [open]  File Upload: support Upload of folder (DVWebUploader feature)
+labels: SPA: File Upload Page, GREI Re-arch
+The DVUploader is integrated in the JSF with an "Upload a Folder" button on the file upload form, which directs the user to the DVWebUploader page.  We need to replicate this UI.
+Example from JSF frontend:
+<img width="1064" height="651" alt="Image" src="https://github.com/user-attachments/assets/b9c6b595-e3fa-440d-8d66-50def1973659" />
+"Upload a Folder" button opens the DVWebUploader page:
+<img width="1552" height="491" alt="Image" src="https://github.com/user-attachments/assets/47d7f446-863d-42 ...
+
+=== IQSS/dataverse.harvard.edu#489  [open]  Add Banner to Harvard Homepage announcing Modern UI Rollout
+labels: Size: 3, Project: HDV SPA Rollout, FY26 Sprint 22, FY26 Sprint 23, FY26 Sprint 24, FY26 Sprint 25, FY26 Sprint 26, FY27 Sprint 1, FY27 Sprint 2, FY27 Sprint 3, FY27 Sprint 4, FY27 Sprint 5, FY27 Sprint 6, FY27 Sprint 7, FY27 Sprint 8
+Once we deploy the latest version of the SPA to production, we want to add a banner to the JSF home page, announcing the rollout and asking users to try it out.
+
+=== IQSS/dataverse-client-javascript#455  [open]  Extend updateCollection use case to include displayOnCreate input level
+labels: GREI Re-arch
+The Edit Collection page needs to be updated to allow setting "displayOnCreate" for metadata fields. The API supports this, but the js-dataverse use case needs to updated to include "displayOnCreate" as a possible inputLevel.
+
+=== IQSS/dataverse#12453  [open]  API: Delete a Guestbook by Id
+labels: Feature: Guestbook, SPA, GREI Re-arch
+For managing guestbook, we are missing an api about deleting a guestbook
+Delete a Guestbook by Id
+[API Retrieve Guestbook Responses for a Dataverse Collection in JSON format](https://github.com/IQSS/dataverse/issues/12451)
+
+=== IQSS/dataverse-frontend#1010  [open]  Use “Download File” instead of “Download ZIP” for single-file datasets
+labels: good first issue, Size: 3, GREI Re-arch, Original size: 3
+For datasets containing only one downloadable file, the `Access Dataset` menu currently displays `Original Format ZIP`. However, downloading a single-file dataset should not require creating a ZIP archive. Instead, the frontend should download the file directly using the single-file download API and update the menu text to `Download File`. Also, for the use case we used, should change to a single-file download.
+<img width="2430" height="906" alt="Image" src="https://github.com/user-attachments/a ...
+
+=== IQSS/dataverse-frontend#1021  [open]  Feature Request: Let a user add an ORCID to indicate who owns the account during creation of a built-in account
+labels: Size: 10, User Role: Curator, User Role: Depositor, SPA
+ALREADY LABELLED: User Role: Curator, User Role: Depositor
+**Overview of the Feature Request**
+**What kind of user is the feature intended for?**
+(Example users roles: API User, Curator, Depositor, Guest, Superuser, Sysadmin)
+Curator, Depositor
+**What inspired the request?**
+We want to increase the amount of ORCIDs used to describe authors and other contributors of datasets published in Dataverse repositories, to help users find datasets more easily.
+One way we've done this, particularly for repositories whose managers let users create accounts and data ...
+
+=== IQSS/dataverse-frontend#1011  [open]  File Citation Download: should be version aware
+labels: Size: 3, GREI Re-arch
+On the File Page, we need to update the File Citation Download so it returns the currently displayed version, not always the latest version.
+Depends on  js-dataverse issue: https://github.com/IQSS/dataverse-client-javascript/issues/459
+
+=== IQSS/dataverse#12533  [open]  Feature Request: show hierarchy of collections via API
+labels: Type: Feature, Feature: API, SPA, Size: 20, FY27: Collection Enhancements
+Update: There is a read-only API for this already. See https://github.com/IQSS/dataverse/issues/12533#issuecomment-4958751926
+https://dataverse.harvard.edu/dataverse/airqualregs has a hierarchy of collections underneath it that looks something like this:
+<img width="829" height="308" alt="Image" src="https://github.com/user-attachments/assets/15f815bc-dbe3-418a-bf16-e8ee1d694724" />
+However, you'd never discover this tree-like structure from looking by looking at the Dataverse UI. You see that t ...
+
+=== IQSS/dataverse-client-javascript#464  [open]  Extend GetCollectionItems use case: add show_relevance
+labels: GREI Re-arch, SPA
+In the Collections page, when a term is entered in the search bar, the collection items should show snippets with the search term highlighted.  To do this, we need to update GetCollectionItems to call the Dataverse search api with show_relevance=true. 
+For example, when searching for 'King' in Dataverse, the snippets of metadata that contain king are shown, and for the description field, 'King' is highlighted.
+In the JSF, we are only highlighting the search term in the description, but using the ...
+
+=== IQSS/dataverse#12534  [open]  Search API: strip html from file description in search results
+labels: SPA, GREI Re-arch
+In the Search API, for dataverse and dataset items, any html in the description is stripped before returning it in the response.  We need to have the same behavior for file items in the response.
+
+=== IQSS/dataverse-frontend#1025  [open]  Dataset Page: Getting Dataset with Preview URL results in 404 error
+labels: GREI Re-arch
+**What steps does it take to reproduce the issue?**
+Create a draft dataset, and in JSF generate a preview url token
+In SPA, go to the dataset page in Incognito, with the preview url token, for example: http://localhost:8000/modern/datasets?privateUrlToken=b06fcca4-ba71-4d01-9776-600e94efbc3c
+The problem is that the API for getting the download size doesn't include the previewUrl token, so it returns a 401 error.  
+To fix this need to add the previewUrl to: 
+/api/datasets/2/versions/{version}/dow ...
+
+=== IQSS/dataverse#12542  [open]  Upload File API: allow uploads before dataset is created
+labels: SPA, GREI Re-arch
+Update the `uploadUrls` API to allow users to upload files before creating a dataset.  Currently this API uses the dataset database id or persistentId to identify the dataset associated with the files.  The implementation uses the datasetId to check permissions, file-count limits, max upload size, quota, and whether the dataset’s store supports direct S3 upload.  Instead of the datasetId, maybe the owner collectionId can be passed.
+
+=== IQSS/dataverse-pm#589  [open]  Design and implement dataset-level tags
+labels: Feature: API, Dataverse Project, Project: NIH CAFE, SPA, FY27 Roadmap, FY27 Priority
+## Overview
+This issue tracks design and implementation work for a new feature enabling dataset owners to create dataset-level tags, similar to file tags ([Dataverse Guides: File Tags](https://guides.dataverse.org/en/latest/user/dataset-management.html#file-tags))
+### Requirements
+- Dataset-level tags do not appear on the front page
+- Collection owners can define and restrict a set of dataset tags within their collection
+### Examples
+**Kaggle Dataset Tags**
+_Tags on the right hand sidebar_
+<img  ...
+
+=== IQSS/dataverse-pm#588  [open]  Design and implement collection-level tags
+labels: Feature: API, Dataverse Project, Project: NIH CAFE, SPA, FY27 Roadmap, FY27 Priority, FY27: Collection Enhancements
+## Overview
+- This issue tracks design and implementation work for a new feature enabling collection owners to create collection-level tags, similar to file tags ([Dataverse Guides: File Tags](https://guides.dataverse.org/en/latest/user/dataset-management.html#file-tags))
+### Requirements
+- Collection-level tags do not appear on the front page 
+- Collection owners can restrict a set of collection tags within their collection
+
+=== IQSS/dataverse#12572  [open]  Download Dataset with POST Access and signedUrl not incrementing download count
+labels: Type: Bug, SPA, GREI Re-arch
+Downloading a zip of a dataset from the Modern UI isn't triggering an increment of the download count.
+It can be reproduced by making the same API calls as the UI, below.
+**What steps does it take to reproduce the issue?**
+1. create a dataset with a file and publish it
+2. Check that the download count:
+curl -sS \
+  -H "X-Dataverse-key: $API_TOKEN" \
+  "$SERVER/api/v1/datasets/$DATASET_ID/download/count" | jq .
+3. Do a post to get the signed URL
+SIGNED_URL="$(
+  curl -sS -X POST \
+    -H "X-Datav ...
+
+=== IQSS/dataverse-frontend#1044  [open]  Feature Request/Idea: Return to Author
+labels: Size: 10, GREI Re-arch, SPA
+**Overview of the Feature Request**
+Curators often return datasets to the author because the dataset is not ready to be published. They can leave a note for the author, as shown in the screenshots below.
+<img width="1445" height="1123" alt="Image" src="https://github.com/user-attachments/assets/bc054f83-5294-4fd9-b98a-31f476f1f1ad" />
+<img width="1445" height="1123" alt="Image" src="https://github.com/user-attachments/assets/55d94476-f4aa-443f-9c2f-a10867c763ad" />
+**What kind of user is the fea ...
+
+=== IQSS/dataverse-frontend#1052  [open]  Feature Request/Idea: As a depositor/curator, I need subject terms that better describe my deposit
+labels: SPA, FY27 Roadmap, FY27 Priority, GREI 2, GREI Year 5
+**Overview of the Feature Request**
+**What kind of user is the feature intended for?**
+(Example users roles: API User, Curator, Depositor, Guest, Superuser, Sysadmin)
+Superuser, Sysadmin, Curator, Depositor, Guest
+**What inspired the request?**
+- [NIH GREI metadata recommendations](https://doi.org/10.5281/zenodo.16953588)
+- Previous work the Dataverse community and the IQSS team have done to consider replacing the 14 Subject terms that ship with Dataverse
+**What existing behavior do you want cha ...
+
+=== IQSS/dataverse#12631  [open]  Feature Request: Enable Anonymized Preview URL access to the API
+labels: Type: Feature, Size: 30, SPA
+**Overview of the Feature Request** In the original back-end design, anonymized/private URL users were not allowed to use the API - their only access was through the UI where we added logic to assure that the fields specified as being anonymized actually are. For the modern UI, we now need to support anonymized/private URL user access to the api, or at least the calls needed by the modern UI (e.g. see https://github.com/IQSS/dataverse-client-javascript/pull/473 for a starting list) with anonymiz ...
+
+=== IQSS/dataverse-frontend#1049  [open]  Feature Request/Idea: Account Sign Up for Builtin Users
+labels: Size: 80, SPA, SPA Feature Complete
+**Overview of the Feature Request**
+We need to support account creation for built in users in the Modern UI, similar to the JSF UI sign up form.  In addition, we want to give the users the ability to add an ORCID id and a ROR.
+For security reasons, we don't want an to expose an API for account creation, instead, we need an API for provisioning a user account, and have a separate process for validating the user's email, and creating the user account after email validation.
+An option for email ver ...
+
+=== IQSS/dataverse-frontend#1064  [open]  SPIKE: Investigate Enabling ORCID Login via CILogon and Keycloak
+labels: Size: 30, SPA
+During the weekly meeting 9/3, we discussed this issue https://github.com/IQSS/dataverse-frontend/issues/1021#issuecomment-5343207048 and identified a potential approach to enable ORCID authentication through CILogon and Keycloak. This spike will investigate the proposed approach, verify its feasibility, and identify any configuration or implementation changes required.
+
+=== IQSS/dataverse-frontend#1069  [open]  Localize remaining dynamic values and system-defined UI labels
+labels: Size: 30, SPA
+**Overview of the Feature Request**
+Follow up on #1063 and #1066 by addressing remaining values and labels that do not follow the selected interface language.
+A codebase scan identified additional gaps, including:
+- Dates and numbers that use the browser locale instead of the interface language.
+- File sizes in upload lists, storage quota messages, and ZIP download limit messages.
+- Unformatted counts in file filters, My Data filters, guestbooks, templates, and file selection messages.
+- English ...
+
+=== IQSS/dataverse-frontend#1098  [open]  Performance: notification/unreadCount polling can fire multiple times per second
+labels: performance, SPA
+Description Summary from this [Slack thread](https://iqss.slack.com/archives/C010LA04BCG/p1790972249000629) 
+**What steps does it take to reproduce the issue?**
+1. Use the ModernUI in production while logged in.
+2. Open and work with dataset pages during a normal curation workflow, such as reviewing and publishing/deleting draft datasets.
+3. Monitor requests to `/api/v1/notifications/unreadCount` in the access logs or browser network panel.
+4. In some cases, the page appears to start calling the ...
+
+=== IQSS/dataverse-frontend#1108  [open]  Implement dataset curation status actions and history
+labels: Size: 30, SPA
+**Overview of the Feature Request**
+The dataset page’s **Change Curation Status** menu currently opens the not-implemented dialog and uses hard-coded labels. Connect it to the js-dataverse use cases to support the existing JSF functionality.
+**What kind of user is the feature intended for?**
+Curator
+**What inspired the request?**
+Curation team
+**Expected behavior**
+- Load the allowed labels for the dataset.
+- Let users with publish permission set, change, or remove a draft’s curation status.
+- D ...
+
+=== IQSS/dataverse-frontend#1114  [open]  Feature Complete: Link Search
+labels: SPA Feature Complete, Superuser
+## Summary
+Legacy JSF lets an authenticated user save the current filtered search on a collection as a "linked search," attaching it to one of their own collections so the search results surface there too (similar to linking a dataverse). The SPA's equivalent "Link" menu only offers "Link Collection" — the search-linking option is absent entirely.
+## Legacy JSF behavior
+On any collection page, the "Link" dropdown offers a "Link Search" action that opens a "Link Search" dialog. The dialog lets th ...
+
+=== IQSS/dataverse-frontend#1115  [open]  Feature Complete: Support contact or User Guide link
+labels: SPA Feature Complete
+## Summary
+Every legacy JSF page carries "User Guide" and "Support" links in the site header, and "Support" opens a contact form addressed to the installation's support address. The new frontend's header has neither — it shows only Language, Add Data and the user menu when signed in, or Language and Log In when anonymous. There is no way to reach installation support, or the user guide, from anywhere in the SPA.
+## Legacy JSF behavior
+`dataverse_header.xhtml` renders "Add Data", "Search", "User  ...
+
+=== IQSS/dataverse-frontend#1116  [open]  Feature Complete:  missing the Add "Replication Data for" to Title
+labels: Size: 10, Original size: 10, SPA Feature Complete
+## Summary
+Legacy JSF puts an `Add "Replication Data for" to Title` button directly beneath the Title field on the create-dataset form. It is a one-click convenience for depositors publishing replication datasets: it prefixes whatever is in the Title with "Replication Data for: ". The new frontend's create-dataset form has no such control.
+## Legacy JSF behavior
+`datasetFieldForEditFragment.xhtml` renders the button for the `title` field whenever `DatasetPage.editMode == 'CREATE'`. It is client- ...
+
+=== IQSS/dataverse-frontend#1120  [open]  Feature Complete: Notification settings pannel
+labels: SPA Feature Complete
+## Summary
+Legacy JSF can let users choose which notifications they receive, separately for email and in-app delivery, from a "Notification settings" panel on the Notifications tab. **This panel is opt-in per installation: it only appears when an admin enables the `:ShowMuteOptions` database setting, which is `false` by default.** The new frontend's Notifications tab lists and dismisses notifications but has no muting controls, so on an installation that has turned muting on, users of the new fr ...
+
+=== IQSS/dataverse-frontend#1121  [open]  Feature Complete: Publish warning is incomplete
+labels: SPA Feature Complete
+## Summary
+The new frontend handles the simple publish-blocked case correctly — a dataset whose immediate parent collection is unpublished gets legacy's exact "Would you like to publish both right now?" prompt. But it misses the other two cases legacy distinguishes: when **two generations** of ancestors are unpublished it still offers to publish "both", naming only the immediate parent; and when **a collection** whose parent is unpublished is published, the SPA shows a generic confirmation with  ...
+
+=== IQSS/dataverse-frontend#1123  [open]  Feature Complete: Publish Collection confirmation dialog bug. 
+labels: SPA Feature Complete, Type: Bug
+# Publishing a sub-collection with an unpublished parent shows a Continue/Cancel confirmation instead of legacy's blocked-publish notice
+## Summary
+When a user publishes a collection whose parent collection is unpublished, legacy JSF blocks the action and explains why. The new frontend shows its normal publish confirmation with **Continue** and **Cancel**, as if publishing could succeed. This is a behavior mismatch, not just a missing warning. The SPA should block the action as legacy does, rath ...
+
+=== IQSS/dataverse-frontend#1124  [open]  Feature Complete: Curation status
+labels: Size: 30, Original size: 30, SPA Feature Complete
+## Summary
+This installation configures curation labels, and the new frontend correctly renders them: the dataset "Publish Dataset" menu shows a "Change Curation Status" submenu listing Author Contacted, Privacy Review, Awaiting Paper Publication, Final Approval and "Remove Current Status". Selecting any of them opens the "Not Implemented" modal instead of applying the status, so a curator cannot set, change or clear a dataset's curation status from the SPA.
+## Legacy JSF behavior
+With curation  ...
+
+=== IQSS/dataverse-frontend#1125  [open]  Feature Complete: Account Information is read-only in the new frontend: no edit, password change or email verification
+labels: Size: 50, Original size: 50, SPA Feature Complete
+## Summary
+Legacy JSF lets a user manage their own account: edit their name, email, affiliation and position, change their password, and re-send the email-verification message when their address is unverified. The new frontend's Account Information tab is a **read-only table** — it displays the same fields but offers no edit, no password change and no email verification. The SPA source marks all three as TODO.
+## Legacy JSF behavior
+`dataverseuser.xhtml` (Account Information tab) shows Username, ...
+
+=== IQSS/dataverse-frontend#1126  [open]  Feature Complete: Dataset and file permissions management
+labels: SPA Feature Complete
+## Summary
+Legacy JSF lets a dataset curator manage who can access a dataset and its restricted files: assign and remove roles on the dataset, and — on a separate file-permissions screen — grant or reject file access requests (individually or in bulk), revoke granted access, and review the request history. In the new frontend the dataset Edit menu still shows a "Permissions" submenu with "Dataset" and "File" entries, but both are wired to the shared not-implemented handler, so neither screen is  ...
+
+=== IQSS/dataverse-frontend#1132  [open]  Feature Complete: Dashboard Harvesting Client
+labels: SPA Feature Complete, Superuser
+## Summary
+Legacy JSF gives superusers a "Manage Harvesting Clients" page for configuring OAI-PMH harvesting from remote repositories: a four-step Create Harvesting Client wizard, plus per-client Run Harvest Now, Edit, and Delete actions. The new frontend has no harvesting administration at all — no route, no component, no strings. The only occurrence of "harvest" in the SPA is a *harvested datasets* counter on the homepage metrics block.
+## Legacy JSF behavior
+`harvestclients.xhtml` lists confi ...
+
+=== IQSS/dataverse-frontend#1131  [open]  Feature Complete: Dashboard Harvesting Server
+labels: SPA Feature Complete, Superuser
+## Summary
+Legacy JSF gives superusers a "Manage Harvesting Server" page that turns this installation's OAI-PMH server on or off and defines the OAI sets (search-query-defined collections of local datasets) that remote harvesters can pull. The new frontend has no harvesting-server administration at all — no route, no component, no strings.
+## Legacy JSF behavior
+`harvestsets.xhtml` shows an "OAI Server" enable/disable control ("Disabled" on a fresh install) and, once the server is enabled, an "A ...
+
+=== IQSS/dataverse-frontend#1130  [open]  Feature Complete: Dashboard | Manage Users
+labels: SPA Feature Complete, Superuser
+## Summary
+Legacy JSF gives superusers a "Manage Users" page listing every account in the installation, with search, sorting, pagination, a per-user superuser toggle (with a confirmation step) and a "Remove All" action for a user's role assignments. The new frontend has no user administration at all — no route, no component, no strings — and no dashboard from which to reach one.
+## Legacy JSF behavior
+`dashboard-users.xhtml` renders a "Search these users..." box, a Sort control, and a table with ...
+
+=== IQSS/dataverse-frontend#1128  [open]  Feature Complete: Dataset "Thumbnails + Widgets" opens placeholder instead of the thumbnail and widget page
+labels: SPA Feature Complete
+## Summary
+Legacy JSF gives a dataset editor a "Thumbnails + Widgets" page with two tabs: **Thumbnail**, where the dataset's preview image is uploaded, selected from one of the dataset's own image files, or removed; and **Widgets**, which hands out embed code for a dataset citation widget and a full dataset widget. In the new frontend the dataset Edit menu still lists "Thumbnails + Widgets", but the entry is wired to the shared not-implemented handler, so neither tab is reachable.
+## Legacy JSF  ...
+
+=== IQSS/dataverse-frontend#1133  [open]  Feature Complete: Downloads metrics panel
+labels: SPA Feature Complete
+## Summary
+The legacy collection page shows a usage-metrics panel — a "Metrics" toggle with the collection's download count — directly above the collection description. The new frontend's collection page has no metrics panel at all. The SPA does show metrics on its homepage, but those come from Dataverse Hub (aggregate, cross-installation figures), not from this collection, so no collection-level usage metric is available anywhere in the SPA.
+## Legacy JSF behavior
+On a collection page, a small  ...
+
+=== IQSS/dataverse-frontend#498  [open]  Move datasets/collections: Add links to the dataset and collections in the alert message 
+labels: SPA Feature Complete
+**Overview of the Feature Request**
+When moving datasets/collections from the Dashboard,
+Have links to the moved dataset or collection and the target collection in the alert messages.
+**Example with success message** `dashboard.card.datamove.message.success` (should also be applied to `dashboard.card.datamove.message.failure.details` and maybe other messages I forgot) :
+Current JSF behavior (screenshot from JSF) :
+![Screenshot from 2024-09-20 18-08-50](https://github.com/user-attachments/as ...
+
+=== IQSS/dataverse-frontend#1135  [open]  superuser "Dashboard"
+labels: SPA Feature Complete, Superuser
+## Summary
+Legacy JSF gives superusers a "Dashboard" entry in the site header's user dropdown, which opens the administrative dashboard (`/dashboard.xhtml`) — the single entry point for Harvesting Clients, Harvesting Server, Metadata Export, user management, and Move Dataset / Move Dataverse. The new frontend's user dropdown has no Dashboard entry for superusers, and no dashboard route exists, so none of the administrative dashboard is reachable from the SPA.
+## Legacy JSF behavior
+The header's  ...
+
+=== IQSS/dataverse-frontend#1136  [open]  Feature Complete: Collection's "Manage Permissions"
+labels: SPA Feature Complete
+## Summary
+The Edit menu's "Permissions" shortcut is the main entry point for curators to view and change who can access a collection. In the SPA, the menu item is present but non-functional.
+## Legacy JSF behavior
+Edit -> Permissions navigates to a working page showing current access rules, an "Edit Access" control, and Users/Groups and Roles panels.
+### Steps to observe
+1. Log into the legacy JSF app (http://localhost:8080) as an admin.
+2. Navigate to any collection page.
+3. Click "Edit" -> "P ...
+
+=== IQSS/dataverse-frontend#1137  [open]  Feature Complete: 403, 500 and other error pages
+labels: SPA Feature Complete
+## Summary
+Legacy JSF serves three distinct error pages, mapped by status code in `web.xml`: a 403 that tells the user they are not authorized and links them to installation support, a 500 that identifies an internal server error, and a 404. The new frontend differentiates only the 404 case; every other routing or loader failure renders one generic page reading "Oops, something went wrong..." with no status code, no indication of whether the problem is permissions or a server fault, and no suppo ...
+
+=== IQSS/dataverse-frontend#1138  [open]  Feature Complete: Collection "Manage Groups"
+labels: SPA Feature Complete
+## Summary
+Collection-scoped custom user Groups let curators bundle users/groups together to assign roles and permissions in bulk. In the SPA, the Edit menu's "Groups" shortcut is present but non-functional, following the same pattern as the "Permissions" shortcut.
+## Legacy JSF behavior
+Edit -> Groups navigates to a working "Manage Dataverse Groups" page with explanatory content ("Why Use Groups?", "How To Use Groups") and a "Create Group" action.
+### Steps to observe
+1. Log into the legacy JSF ...
+
+=== IQSS/dataverse-frontend#1139  [open]  Feature Complete: Collection "Theme + Widgets"
+labels: SPA Feature Complete
+## Summary
+Legacy JSF lets a collection administrator brand a collection from the "Theme + Widgets" page: inherit the parent theme, upload logo / thumbnail / footer images, set header background, link and text colors, and set a tagline and website link. The new frontend keeps the "Theme + Widgets" entry in the collection Edit menu, but selecting it opens the "Not Implemented" modal — no theme form exists in the SPA, so collection branding cannot be viewed or changed there.
+## Legacy JSF behavior ...
+
+=== IQSS/dataverse#12859  [open]  Feature Request: Sign up builtin users via API, with optional ORCID iD
+labels: Type: Feature, Size: 30, SPA
+**Overview of the Feature Request**
+Let new users create a builtin Dataverse account through the API, so the modern UI (SPA) can offer a "Sign Up" page like the JSF one. While signing up, users can optionally connect their ORCID iD. ORCID then pre-fills their details (name, email, affiliation, position and a suggested username), and the ORCID iD is saved to the new account.
+**What kind of user is the feature intended for?**
+(Example users roles: API User, Curator, Depositor, Guest, Superuser, Sy ...
+

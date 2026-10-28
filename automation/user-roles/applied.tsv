@@ -1,0 +1,81 @@
+date	key	added	status	url
+2026-10-28T14:55:44	IQSS/dataverse#12451	User Role: Curator	added	https://github.com/IQSS/dataverse/issues/12451
+2026-10-28T14:55:44	IQSS/dataverse#11974	User Role: Depositor	added	https://github.com/IQSS/dataverse/issues/11974
+2026-10-28T14:55:44	IQSS/dataverse-frontend#819	User Role: Sysadmin	added	https://github.com/IQSS/dataverse-frontend/issues/819
+2026-10-28T14:55:44	IQSS/dataverse-frontend#806	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/806
+2026-10-28T14:55:44	IQSS/dataverse-frontend#784	User Role: Depositor; User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/784
+2026-10-28T14:55:44	IQSS/dataverse#11453	User Role: Curator; User Role: Depositor	added	https://github.com/IQSS/dataverse/issues/11453
+2026-10-28T14:55:44	IQSS/dataverse#11090	User Role: Sysadmin; User Role: Superuser	added	https://github.com/IQSS/dataverse/issues/11090
+2026-10-28T14:55:44	IQSS/dataverse-frontend#565	User Role: Sysadmin; User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/565
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#211		skipped: repo has no User Role: Sysadmin	https://github.com/IQSS/dataverse-client-javascript/issues/211
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#208		skipped: repo has no User Role: Sysadmin	https://github.com/IQSS/dataverse-client-javascript/issues/208
+2026-10-28T14:55:44	IQSS/dataverse#9969	User Role: Sysadmin; User Role: Curator	added	https://github.com/IQSS/dataverse/issues/9969
+2026-10-28T14:55:44	IQSS/dataverse#9979	User Role: Guest	added	https://github.com/IQSS/dataverse/issues/9979
+2026-10-28T14:55:44	IQSS/dataverse#7623	User Role: Curator	added	https://github.com/IQSS/dataverse/issues/7623
+2026-10-28T14:55:44	IQSS/dataverse-frontend#350	User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/350
+2026-10-28T14:55:44	IQSS/dataverse-frontend#431	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/431
+2026-10-28T14:55:44	IQSS/dataverse-frontend#465	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/465
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#186		skipped: repo has no User Role: Sysadmin	https://github.com/IQSS/dataverse-client-javascript/issues/186
+2026-10-28T14:55:44	IQSS/dataverse-frontend#513	User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/513
+2026-10-28T14:55:44	IQSS/dataverse-frontend#585	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/585
+2026-10-28T14:55:44	IQSS/dataverse-frontend#584	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/584
+2026-10-28T14:55:44	IQSS/dataverse-frontend#592	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/592
+2026-10-28T14:55:44	IQSS/dataverse#11456	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse/issues/11456
+2026-10-28T14:55:44	IQSS/dataverse-frontend#705	User Role: Sysadmin	added	https://github.com/IQSS/dataverse-frontend/issues/705
+2026-10-28T14:55:44	IQSS/dataverse#11625	User Role: Guest; User Role: Sysadmin	added	https://github.com/IQSS/dataverse/issues/11625
+2026-10-28T14:55:44	IQSS/dataverse-frontend#670	User Role: Sysadmin	added	https://github.com/IQSS/dataverse-frontend/issues/670
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#295		skipped: repo has no User Role: Sysadmin	https://github.com/IQSS/dataverse-client-javascript/issues/295
+2026-10-28T14:55:44	IQSS/dataverse-frontend#827	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/827
+2026-10-28T14:55:44	IQSS/dataverse#12528	User Role: Depositor; User Role: Curator	added	https://github.com/IQSS/dataverse/issues/12528
+2026-10-28T14:55:44	IQSS/dataverse-frontend#895	User Role: Curator; User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/895
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#412		skipped: repo has no User Role: Guest	https://github.com/IQSS/dataverse-client-javascript/issues/412
+2026-10-28T14:55:44	IQSS/dataverse-frontend#917	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/917
+2026-10-28T14:55:44	IQSS/dataverse-frontend#918	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/918
+2026-10-28T14:55:44	IQSS/dataverse#10731	User Role: Guest	added	https://github.com/IQSS/dataverse/issues/10731
+2026-10-28T14:55:44	IQSS/dataverse-frontend#937	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/937
+2026-10-28T14:55:44	IQSS/dataverse#12330	User Role: Curator	added	https://github.com/IQSS/dataverse/issues/12330
+2026-10-28T14:55:44	IQSS/dataverse-frontend#983	User Role: Sysadmin	added	https://github.com/IQSS/dataverse-frontend/issues/983
+2026-10-28T14:55:44	IQSS/dataverse#12385	User Role: Depositor; User Role: Curator	added	https://github.com/IQSS/dataverse/issues/12385
+2026-10-28T14:55:44	IQSS/dataverse-frontend#993	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/993
+2026-10-28T14:55:44	IQSS/dataverse.harvard.edu#489		skipped: repo has no User Role: Guest	https://github.com/IQSS/dataverse.harvard.edu/issues/489
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#455		skipped: repo has no User Role: Curator	https://github.com/IQSS/dataverse-client-javascript/issues/455
+2026-10-28T14:55:44	IQSS/dataverse#12453	User Role: Curator	added	https://github.com/IQSS/dataverse/issues/12453
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1010	User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/1010
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1011	User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/1011
+2026-10-28T14:55:44	IQSS/dataverse#12533	User Role: Guest; User Role: Curator	added	https://github.com/IQSS/dataverse/issues/12533
+2026-10-28T14:55:44	IQSS/dataverse-client-javascript#464		skipped: repo has no User Role: Guest	https://github.com/IQSS/dataverse-client-javascript/issues/464
+2026-10-28T14:55:44	IQSS/dataverse#12534	User Role: Guest	added	https://github.com/IQSS/dataverse/issues/12534
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1025	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/1025
+2026-10-28T14:55:44	IQSS/dataverse#12542	User Role: Depositor	added	https://github.com/IQSS/dataverse/issues/12542
+2026-10-28T14:55:44	IQSS/dataverse-pm#589	User Role: Depositor; User Role: Curator	added	https://github.com/IQSS/dataverse-pm/issues/589
+2026-10-28T14:55:44	IQSS/dataverse-pm#588	User Role: Curator	added	https://github.com/IQSS/dataverse-pm/issues/588
+2026-10-28T14:55:44	IQSS/dataverse#12572	User Role: Guest	added	https://github.com/IQSS/dataverse/issues/12572
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1044	User Role: Curator; User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/1044
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1052	User Role: Depositor; User Role: Curator; User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/1052
+2026-10-28T14:55:44	IQSS/dataverse#12631	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse/issues/12631
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1049	User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/1049
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1064	User Role: Sysadmin; User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/1064
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1069	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/1069
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1098	User Role: Sysadmin; User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1098
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1108	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1108
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1114	User Role: Curator; User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/1114
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1115	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/1115
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1116	User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/1116
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1120	User Role: Depositor; User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1120
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1121	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1121
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1123	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1123
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1124	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1124
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1125	User Role: Guest; User Role: Depositor	added	https://github.com/IQSS/dataverse-frontend/issues/1125
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1126	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1126
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1132	User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/1132
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1131	User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/1131
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1130	User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/1130
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1128	User Role: Depositor; User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1128
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1133	User Role: Guest; User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1133
+2026-10-28T14:55:44	IQSS/dataverse-frontend#498	User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/498
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1135	User Role: Superuser	added	https://github.com/IQSS/dataverse-frontend/issues/1135
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1136	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1136
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1137	User Role: Guest	added	https://github.com/IQSS/dataverse-frontend/issues/1137
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1138	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1138
+2026-10-28T14:55:44	IQSS/dataverse-frontend#1139	User Role: Curator	added	https://github.com/IQSS/dataverse-frontend/issues/1139
+2026-10-28T14:55:44	IQSS/dataverse#12859	User Role: Guest	added	https://github.com/IQSS/dataverse/issues/12859

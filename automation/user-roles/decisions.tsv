@@ -1,0 +1,81 @@
+key	roles	why	title
+IQSS/dataverse#12451	curator	Collection admins retrieve guestbook responses for their collection	API Retrieve Guestbook Responses for a Dataverse Collection in JSON format
+IQSS/dataverse#11974	depositor	Depositors create datasets from templates with custom terms of use	Create Dataset API: add termsOfUse to DatasetDTO
+IQSS/dataverse-frontend#819	sysadmin	Shibboleth/Keycloak dev environment; stated user is Sysadmin	Fix shib-dev-env
+IQSS/dataverse-frontend#806	seeker,depositor	Plan for the redesigned Harvard UI seen by visitors and depositors	[Spike] - Modernized Harvard Dataverse UI Plan
+IQSS/dataverse-frontend#784	depositor,curator	Lock message shown to people editing or publishing during ingest	Dataset Page: display Dataset Locked message during file ingest
+IQSS/dataverse#11453	curator,depositor	Collection admins manage templates; depositors create datasets from them	Feature Request: Add Template APIs for SPA
+IQSS/dataverse#11090	sysadmin,superuser	Provider configured via JVM options; affects the Manage Users dashboard	Provision a Provider via JVM: provider data is not being added to authenticationproviderrow
+IQSS/dataverse-frontend#565	sysadmin,superuser	OIDC provider provisioning; affects the Manage Users dashboard	OIDC Integration: Problem Provisioning a Provider via JVM
+IQSS/dataverse-client-javascript#211	sysadmin	Developer CI fix; no end-user audience (hard to place)	Fix github package registry deployment issues on PRs
+IQSS/dataverse-client-javascript#208	sysadmin	Developer CI coverage step; no end-user audience (hard to place)	Add coverage run github action step
+IQSS/dataverse#9969	sysadmin,curator	Stated user Sysadmin; maps OIDC groups used for permissions	OIDC: enable mapping `groups` claim to user groups
+IQSS/dataverse#9979	seeker	API dates shown in every visitor's local time zone	[Spike - API] Ensure all dates are UTC
+IQSS/dataverse#7623	curator	Collection admins customize metadata blocks for their collection	"Dataverse creation, metadata block: I want to change from using the ""Installation metadata default settings"" at any point in my workflow in customizing metadata for my Dataverse collection"
+IQSS/dataverse-frontend#350	seeker	Schema.org/Croissant metadata improves dataset discoverability	Add Schema.org or Croissant metadata to header of Dataset view page
+IQSS/dataverse-frontend#431	depositor	File upload page features; stated user Depositor	Feature Request/431 file upload page missing features
+IQSS/dataverse-frontend#465	depositor	Tests for file repository used in upload and file handling (developer work)	FileRepository e2e tests failing
+IQSS/dataverse-client-javascript#186	sysadmin	Developer test coverage; no end-user audience (hard to place)	Fix branch test coverage in classes with 0% coverage and restore branch expected coverage back to 95%
+IQSS/dataverse-frontend#513	seeker	Highlighting search terms in collection search results	Highlight search text in collection page results
+IQSS/dataverse-frontend#585	curator	Rich text editor used when editing collection featured items	Rich Text Editor -  formatted list buttons and header tags unexpected behavior
+IQSS/dataverse-frontend#584	depositor	Duplicate file handling on the upload page	Upload File Page - does not handle duplicate files correctly
+IQSS/dataverse-frontend#592	depositor	Help text in Edit Dataset metadata fields	Edit Dataset Page: Analyze options to improve textbox fields
+IQSS/dataverse#11456	seeker,depositor	Feedback form for logged-in users of the modern UI	API endpoint - SPA Users Feedback
+IQSS/dataverse-frontend#705	sysadmin	Developer code-coverage tooling; no end-user audience (hard to place)	Coveralls: code coverage can change unexpectedly
+IQSS/dataverse#11625	seeker,sysadmin	Faster version summaries for viewers; new DB cache table for operators	Feature Request: Enhance Dataverse Caching for Dataset Version Summary
+IQSS/dataverse-frontend#670	sysadmin	Operator-provided analytics.html injected into the SPA	Integrate Get Analytics Use Case
+IQSS/dataverse-client-javascript#295	sysadmin	Reads the installation's operator-configured analytics file	Get Analytics HTML Use Case
+IQSS/dataverse-frontend#827	depositor	Edit Terms page: dataset terms, terms of access, guestbook	Dataset Page: Edit Terms
+IQSS/dataverse#12528	depositor,curator	Assigning a guestbook to a dataset should create a draft	API for assigning guestbook to dataset should create a draft version
+IQSS/dataverse-frontend#895	curator,seeker	Access-request history for those who grant and those who request	Feature Request: Design and implement SPA view to see list of file/dataset history of access requests
+IQSS/dataverse-client-javascript#412	seeker	File downloads with bearer-token authentication	Use bearer token authentication for file downloads
+IQSS/dataverse-frontend#917	depositor	Create dataset from a template	Create Dataset: include templateId when saving dataset
+IQSS/dataverse-frontend#918	depositor	Template custom instructions shown when editing a dataset	Edit Dataset: Display Custom Instructions from Template
+IQSS/dataverse#10731	seeker	Terms of access shown when requesting access to restricted files	"Inconsistent behaviour ""Terms of Access for Restricted Files"" field does not appear "
+IQSS/dataverse-frontend#937	depositor	Storage quota messages on the upload page	Upload File Page - Storage Quota Improvements
+IQSS/dataverse#12330	curator	Collection guestbook responses download times out	"""Download All Responses"" button and API endpoint for retrieving guestbook responses time out when used to get responses from certain collections"
+IQSS/dataverse-frontend#983	sysadmin	Project planning for feature completeness; no single audience (hard to place)	Define feature complete
+IQSS/dataverse#12385	depositor,curator	My Data page fails for an admin user	MyData API returns error for dataverseAdmin user on QA
+IQSS/dataverse-frontend#993	depositor	Upload a folder of files	File Upload: support Upload of folder (DVWebUploader feature)
+IQSS/dataverse.harvard.edu#489	seeker	Homepage banner announcing the modern UI to visitors	Add Banner to Harvard Homepage announcing Modern UI Rollout
+IQSS/dataverse-client-javascript#455	curator	Edit Collection: displayOnCreate metadata setting	Extend updateCollection use case to include displayOnCreate input level
+IQSS/dataverse#12453	curator	Collection admins delete guestbooks	API: Delete a Guestbook by Id
+IQSS/dataverse-frontend#1010	seeker	Download a single-file dataset directly	Use “Download File” instead of “Download ZIP” for single-file datasets
+IQSS/dataverse-frontend#1011	seeker	Version-aware file citation download	File Citation Download: should be version aware
+IQSS/dataverse#12533	seeker,curator	Discovering the hierarchy of collections	Feature Request: show hierarchy of collections via API
+IQSS/dataverse-client-javascript#464	seeker	Search snippets with highlighted terms on the collection page	Extend GetCollectionItems use case: add show_relevance
+IQSS/dataverse#12534	seeker	Clean file descriptions in search results	Search API: strip html from file description in search results
+IQSS/dataverse-frontend#1025	seeker,depositor	Preview URL access for reviewers of a draft dataset	Dataset Page: Getting Dataset with Preview URL results in 404 error
+IQSS/dataverse#12542	depositor	Uploading files before the dataset is created	Upload File API: allow uploads before dataset is created
+IQSS/dataverse-pm#589	depositor,curator	Dataset owners add tags; collection owners restrict the tag set	Design and implement dataset-level tags
+IQSS/dataverse-pm#588	curator	Collection owners create and restrict collection tags	Design and implement collection-level tags
+IQSS/dataverse#12572	seeker	Dataset zip downloads not counted	Download Dataset with POST Access and signedUrl not incrementing download count
+IQSS/dataverse-frontend#1044	curator,depositor	Return to Author: stated user Curator; the author receives the note	Feature Request/Idea: Return to Author
+IQSS/dataverse-frontend#1052	depositor,curator,seeker	Better subject terms for describing and finding deposits	Feature Request/Idea: As a depositor/curator, I need subject terms that better describe my deposit
+IQSS/dataverse#12631	seeker,depositor	Anonymized preview URL access for reviewers	Feature Request: Enable Anonymized Preview URL access to the API
+IQSS/dataverse-frontend#1049	seeker	Account sign-up for built-in users	Feature Request/Idea: Account Sign Up for Builtin Users
+IQSS/dataverse-frontend#1064	sysadmin,seeker	ORCID login via CILogon/Keycloak configuration	SPIKE: Investigate Enabling ORCID Login via CILogon and Keycloak
+IQSS/dataverse-frontend#1069	seeker,depositor	Localization of UI labels for all modern UI users	Localize remaining dynamic values and system-defined UI labels
+IQSS/dataverse-frontend#1098	sysadmin,curator	Notification polling load on the server during curation workflows	Performance: notification/unreadCount polling can fire multiple times per second
+IQSS/dataverse-frontend#1108	curator	Dataset curation status actions; stated user Curator	Implement dataset curation status actions and history
+IQSS/dataverse-frontend#1114	curator,superuser	Link a saved search into a collection; issue also labelled Superuser	Feature Complete: Link Search
+IQSS/dataverse-frontend#1115	seeker,depositor	Support contact and User Guide links in the header	Feature Complete: Support contact or User Guide link
+IQSS/dataverse-frontend#1116	depositor	'Replication Data for' title shortcut on create dataset	"Feature Complete:  missing the Add ""Replication Data for"" to Title"
+IQSS/dataverse-frontend#1120	depositor,curator	Per-user notification settings	Feature Complete: Notification settings pannel
+IQSS/dataverse-frontend#1121	curator	Publish warnings for unpublished parent collections	Feature Complete: Publish warning is incomplete
+IQSS/dataverse-frontend#1123	curator	Publish collection with an unpublished parent	Feature Complete: Publish Collection confirmation dialog bug. 
+IQSS/dataverse-frontend#1124	curator	Change curation status from the SPA	Feature Complete: Curation status
+IQSS/dataverse-frontend#1125	seeker,depositor	Edit own account, change password, verify email	Feature Complete: Account Information is read-only in the new frontend: no edit, password change or email verification
+IQSS/dataverse-frontend#1126	curator	Dataset and file permissions and access requests	Feature Complete: Dataset and file permissions management
+IQSS/dataverse-frontend#1132	superuser	Dashboard: harvesting clients	Feature Complete: Dashboard Harvesting Client
+IQSS/dataverse-frontend#1131	superuser	Dashboard: harvesting server	Feature Complete: Dashboard Harvesting Server
+IQSS/dataverse-frontend#1130	superuser	Dashboard: manage users	Feature Complete: Dashboard | Manage Users
+IQSS/dataverse-frontend#1128	depositor,curator	Dataset thumbnails and widgets for dataset editors	"Feature Complete: Dataset ""Thumbnails + Widgets"" opens placeholder instead of the thumbnail and widget page"
+IQSS/dataverse-frontend#1133	seeker,curator	Collection download metrics panel	Feature Complete: Downloads metrics panel
+IQSS/dataverse-frontend#498	superuser	Dashboard move datasets/collections; stated user Superuser	Move datasets/collections: Add links to the dataset and collections in the alert message 
+IQSS/dataverse-frontend#1135	superuser	Superuser dashboard entry point	"superuser ""Dashboard"""
+IQSS/dataverse-frontend#1136	curator	Collection Manage Permissions	"Feature Complete: Collection's ""Manage Permissions"""
+IQSS/dataverse-frontend#1137	seeker	403/500 error pages for any visitor	Feature Complete: 403, 500 and other error pages
+IQSS/dataverse-frontend#1138	curator	Collection Manage Groups	"Feature Complete: Collection ""Manage Groups"""
+IQSS/dataverse-frontend#1139	curator	Collection Theme + Widgets branding by the collection admin	"Feature Complete: Collection ""Theme + Widgets"""
+IQSS/dataverse#12859	seeker	Sign up via API; stated user Guest creating an account	Feature Request: Sign up builtin users via API, with optional ORCID iD

@@ -1,0 +1,50 @@
+Title,Link,Classification
+Fix shib-dev-env,https://github.com/IQSS/dataverse-frontend/issues/819,Data Curators and Installation Administrators
+[Spike] - Modernized Harvard Dataverse UI Plan,https://github.com/IQSS/dataverse-frontend/issues/806,Other
+Dataset Page: display Dataset Locked message during file ingest,https://github.com/IQSS/dataverse-frontend/issues/784,"Data Depositors, Seekers, and Downloaders"
+Feature Request: Add Template APIs for SPA,https://github.com/IQSS/dataverse/issues/11453,Other
+New single general API endpoint to expose settings based on a new grouping and naming,https://github.com/IQSS/dataverse/pull/10126,Other
+OIDC Integration: Problem Provisioning a Provider via JVM,https://github.com/IQSS/dataverse-frontend/issues/565,Data Curators and Installation Administrators
+Fix github package registry deployment issues on PRs,https://github.com/IQSS/dataverse-client-javascript/issues/211,Other
+Add coverage run github action step,https://github.com/IQSS/dataverse-client-javascript/issues/208,Other
+"As a Dataverse collection admin, I want to use the UI to link harvested datasets into my collection",https://github.com/IQSS/dataverse/issues/4025,Data Curators and Installation Administrators
+OIDC: enable mapping `groups` claim to user groups,https://github.com/IQSS/dataverse/issues/9969,Data Curators and Installation Administrators
+[Spike - API] Ensure all dates are UTC,https://github.com/IQSS/dataverse/issues/9979,Data Curators and Installation Administrators
+Add Schema.org or Croissant metadata to header of Dataset view page,https://github.com/IQSS/dataverse-frontend/issues/350,"Data Depositors, Seekers, and Downloaders"
+Feature Request/431 file upload page missing features,https://github.com/IQSS/dataverse-frontend/issues/431,"Data Depositors, Seekers, and Downloaders"
+FileRepository e2e tests failing,https://github.com/IQSS/dataverse-frontend/issues/465,Other
+Fix branch test coverage in classes with 0% coverage and restore branch expected coverage back to 95%,https://github.com/IQSS/dataverse-client-javascript/issues/186,Other
+Highlight search text in collection page results,https://github.com/IQSS/dataverse-frontend/issues/513,"Data Depositors, Seekers, and Downloaders"
+Group list paging,https://github.com/IQSS/dataverse/issues/7933,"Data Depositors, Seekers, and Downloaders"
+Rich Text Editor -  formatted list buttons and header tags unexpected behavior,https://github.com/IQSS/dataverse-frontend/issues/585,Data Curators and Installation Administrators
+Upload File Page - does not handle duplicate files correctly,https://github.com/IQSS/dataverse-frontend/issues/584,"Data Depositors, Seekers, and Downloaders"
+Edit Dataset Page: Analyze options to improve textbox fields,https://github.com/IQSS/dataverse-frontend/issues/592,"Data Depositors, Seekers, and Downloaders"
+Native API: Get InstallationName,https://github.com/IQSS/dataverse/issues/9391,Other
+Feature Request/Idea: Export metadatablock definition per Dataverse collection,https://github.com/IQSS/dataverse/issues/9477,Other
+API endpoint - SPA Users Feedback,https://github.com/IQSS/dataverse/issues/11456,Other
+Coveralls: code coverage can change unexpectedly,https://github.com/IQSS/dataverse-frontend/issues/705,Other
+Integrate Get Analytics Use Case,https://github.com/IQSS/dataverse-frontend/issues/670,Other
+Get Analytics HTML Use Case,https://github.com/IQSS/dataverse-client-javascript/issues/295,Other
+Dataset Page: Edit Terms,https://github.com/IQSS/dataverse-frontend/issues/827,"Data Depositors, Seekers, and Downloaders"
+Feature Request: Design and implement SPA view to see list of file/dataset history of access requests,https://github.com/IQSS/dataverse-frontend/issues/895,Data Curators and Installation Administrators
+Use bearer token authentication for file downloads,https://github.com/IQSS/dataverse-client-javascript/issues/412,"Data Depositors, Seekers, and Downloaders"
+Create Dataset: include templateId when saving dataset,https://github.com/IQSS/dataverse-frontend/issues/917,"Data Depositors, Seekers, and Downloaders"
+Edit Dataset: Display Custom Instructions from Template,https://github.com/IQSS/dataverse-frontend/issues/918,"Data Depositors, Seekers, and Downloaders"
+"Inconsistent behaviour ""Terms of Access for Restricted Files"" field does not appear ",https://github.com/IQSS/dataverse/issues/10731,"Data Depositors, Seekers, and Downloaders"
+MyData API returns error for dataverseAdmin user on QA,https://github.com/IQSS/dataverse/issues/12385,Other
+File Upload: support Upload of folder (DVWebUploader feature),https://github.com/IQSS/dataverse-frontend/issues/993,"Data Depositors, Seekers, and Downloaders"
+Extend updateCollection use case to include displayOnCreate input level,https://github.com/IQSS/dataverse-client-javascript/issues/455,Other
+File Citation Download: should be version aware,https://github.com/IQSS/dataverse-frontend/issues/1011,"Data Depositors, Seekers, and Downloaders"
+Extend GetCollectionItems use case: add show_relevance,https://github.com/IQSS/dataverse-client-javascript/issues/464,Other
+Search API: strip html from file description in search results,https://github.com/IQSS/dataverse/issues/12534,"Data Depositors, Seekers, and Downloaders"
+Dataset Page: Getting Dataset with Preview URL results in 404 error,https://github.com/IQSS/dataverse-frontend/issues/1025,"Data Depositors, Seekers, and Downloaders"
+Upload File API: allow uploads before dataset is created,https://github.com/IQSS/dataverse/issues/12542,"Data Depositors, Seekers, and Downloaders"
+Performance: notification/unreadCount polling can fire multiple times per second,https://github.com/IQSS/dataverse-frontend/issues/1098,Data Curators and Installation Administrators
+Feature Complete: Link Search,https://github.com/IQSS/dataverse-frontend/issues/1114,"Data Depositors, Seekers, and Downloaders"
+Feature Complete: Support contact or User Guide link,https://github.com/IQSS/dataverse-frontend/issues/1115,Other
+Feature Complete: Notification settings pannel,https://github.com/IQSS/dataverse-frontend/issues/1120,Other
+Feature Complete: Publish warning is incomplete,https://github.com/IQSS/dataverse-frontend/issues/1121,Data Curators and Installation Administrators
+Feature Complete: Publish Collection confirmation dialog bug. ,https://github.com/IQSS/dataverse-frontend/issues/1123,Other
+"Feature Complete: Account Information is read-only in the new frontend: no edit, password change or email verification",https://github.com/IQSS/dataverse-frontend/issues/1125,Other
+Feature Complete: Dataset and file permissions management,https://github.com/IQSS/dataverse-frontend/issues/1126,Data Curators and Installation Administrators
+Proof of Concept: external vocab use cases,https://github.com/IQSS/dataverse-client-javascript/pull/472,Other

@@ -1,0 +1,27 @@
+jp	iqss	status	score	runner_up	jp_title	iqss_title
+1	1114	auto	0.98	0.06	Collection page missing Save Linked Search (Link Search) action	Feature Complete: Link Search
+2	1136	auto	0.96	0.20	"Collection ""Manage Permissions"" shortcut opens placeholder instead of permissions page"	"Feature Complete: Collection's ""Manage Permissions"""
+3	1138	auto	0.97	0.20	"Collection ""Manage Groups"" shortcut opens placeholder instead of groups page"	"Feature Complete: Collection ""Manage Groups"""
+4		none	0.05	0.03	Site-wide dismissible banner messages are not rendered in the new frontend	
+5	1135	auto	0.98	0.07	"Site header missing superuser ""Dashboard"" entry; no dashboard route in the new frontend"	"superuser ""Dashboard"""
+6	1139	auto	0.98	0.09	"Collection ""Theme + Widgets"" opens placeholder instead of the theme/branding form"	"Feature Complete: Collection ""Theme + Widgets"""
+7	1140	auto	0.98	0.09	Collection Widgets tab (search box and listing embed code) is absent from the new frontend	Feature Complete: Widgets
+8	1134	auto	0.98	0.11	"Dashboard ""Move Dataset"" workflow is absent from the new frontend"	"Feature Complete: Dashboard ""Move Dataset"""
+9	1137	auto	0.95	0.04	"New frontend has no 403 or 500 error pages; all non-404 failures show one generic ""Oops"" page"	Feature Complete: 403, 500 and other error pages
+10		none	0.05	0.04	Site header has no Sign Up entry for anonymous visitors in the new frontend	
+11	1133	auto	0.91	0.05	Collection page is missing the usage/download metrics panel in the new frontend	Feature Complete: Downloads metrics panel
+12	1132	auto	0.98	0.22	Harvesting client administration is absent from the new frontend	Feature Complete: Dashboard Harvesting Client
+13	1131	auto	0.98	0.22	Harvesting server (OAI-PMH) administration is absent from the new frontend	Feature Complete: Dashboard Harvesting Server
+14	1130	auto	0.98	0.16	"Superuser ""Manage Users"" administration is absent from the new frontend"	Feature Complete: Dashboard | Manage Users
+15		none	0.13	0.13	Superuser reindex tools (Index All / Check Status) are absent from the new frontend	
+16		none	0.10	0.10	"Collection ""Dataset Guestbooks"" management opens placeholder instead of the guestbooks page"	
+17		none	0.10	0.10	"Collection ""Dataset Templates"" management opens placeholder instead of the templates page"	
+18	1128	auto	1.00	0.12	"Dataset ""Thumbnails + Widgets"" opens placeholder instead of the thumbnail and widget page"	"Feature Complete: Dataset ""Thumbnails + Widgets"" opens placeholder instead of the thumbnail and widget page"
+19	1127	auto	1.00	0.12	Dataset Private/Preview URL creation opens placeholder in the new frontend	Feature Complete: Dataset Private/Preview URL creation opens placeholder in the new frontend
+20	1126	auto	0.98	0.10	Dataset and file permissions management opens placeholder in the new frontend	Feature Complete: Dataset and file permissions management
+21	1125	auto	1.00	0.04	Account Information is read-only in the new frontend: no edit, password change or email verification	Feature Complete: Account Information is read-only in the new frontend: no edit, password change or email verification
+22	1124	auto	0.98	0.05	Change/Remove Curation Status renders its labels but every option opens the Not Implemented placeholder	Feature Complete: Curation status
+23	1121	auto	0.98	0.05	Publish-blocked warnings are incomplete: two unpublished generations and collection publish are not handled	Feature Complete: Publish warning is incomplete
+24	1120	auto	0.99	0.04	Notification muting (email and in-app) is absent from the new frontend	Feature Complete: Notification settings pannel
+25	1116	auto	0.97	0.05	"Create-dataset form is missing the Add ""Replication Data for"" to Title helper"	"Feature Complete:  missing the Add ""Replication Data for"" to Title"
+26	1115	auto	0.98	0.05	No installation Support contact or User Guide link anywhere in the new frontend	Feature Complete: Support contact or User Guide link
